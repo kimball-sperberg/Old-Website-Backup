@@ -62,6 +62,10 @@ a img { border: none; }
     text-decoration: none;
 }
 
+details {
+	cursor: pointer;
+}
+
 summary {
     text-transform: uppercase;
     font-size: 16px;
