@@ -83,8 +83,9 @@ summary::-webkit-details-marker {
     outline: -webkit-focus-ring-color auto 5px;
     outline-width: 0px;
 }
-summary a:hover, summary a:hover  {
+summary a:hover, summary:hover  {
 	text-decoration:none;
+	cursor:pointer;
 }
 
 #menu ul li.section-title a:hover {
