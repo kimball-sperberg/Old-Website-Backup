@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Portfolio TV</title>
+		<!-- Bootstrap's CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+		<!-- My CSS -->
+		<link rel="stylesheet" type="text/css" href="Portfolio_TV.css">
+		<!-- jQuery -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<script src="jquery-3.2.1.min.js"></script>
+		<!-- Glitch text script written by Lea Verou -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+	<style>
+    	/*body {
+      	background-color: black;
+    	}*/
+
+			h1 {
+				text-align: center;
+			}
+
+    	.glitch {
+      	color: white;
+    	}
+
+    	.glitch {
+      	position: relative;
+    	}
+
+    	.glitch:after {
+      	animation: glitch-animation 2s infinite linear alternate-reverse;
+      	clip: rect( 0, 900px, 0, 0 );
+      	color: white;
+      	content: attr( data-text );
+      	left: 2px;
+      	overflow: hidden;
+      	position: absolute;
+      	text-shadow: -1px 0 red;
+      	top: 0;
+				opacity: 0.6;
+    	}
+
+    	.glitch:before {
+	     	animation: glitch-animation-2 3s infinite linear alternate-reverse;
+      	clip: rect( 0, 900px, 0, 0 );
+      	color: white;
+      	content: attr( data-text );
+      	left: -2px;
+      	overflow: hidden;
+      	position: absolute;
+      	text-shadow: 1px 0 green;
+      	top: 0;
+				opacity: 0.6;
+    	}
+
+    	@keyframes glitch-animation {
+      	0% {
+        	clip: rect(42px, 9999px, 44px, 0);
+      	}
+      	5% {
+        	clip: rect(12px, 9999px, 59px, 0);
+      	}
+      	10% {
+        	clip: rect(48px, 9999px, 29px, 0);
+      	}
+      	15.0% {
+        	clip: rect(42px, 9999px, 73px, 0);
+      	}
+      	20% {
+        	clip: rect(63px, 9999px, 27px, 0);
+      	}
+      	25% {
+        	clip: rect(34px, 9999px, 55px, 0);
+      	}
+      	30.0% {
+        	clip: rect(86px, 9999px, 73px, 0);
+      	}
+      	35% {
+        	clip: rect(20px, 9999px, 20px, 0);
+	     	}
+      	40% {
+        	clip: rect(26px, 9999px, 60px, 0);
+      	}
+      	45% {
+        	clip: rect(25px, 9999px, 66px, 0);
+      	}
+      	50% {
+        	clip: rect(57px, 9999px, 98px, 0);
+      	}
+      	55.0% {
+        	clip: rect(5px, 9999px, 46px, 0);
+      	}
+	     	60.0% {
+        	clip: rect(82px, 9999px, 31px, 0);
+      	}
+      	65% {
+        	clip: rect(54px, 9999px, 27px, 0);
+      	}
+      	70% {
+        	clip: rect(28px, 9999px, 99px, 0);
+      	}
+      	75% {
+        	clip: rect(45px, 9999px, 69px, 0);
+      	}
+      	80% {
+        	clip: rect(23px, 9999px, 85px, 0);
+      	}
+      	85.0% {
+        	clip: rect(54px, 9999px, 84px, 0);
+      	}
+      	90% {
+        	clip: rect(45px, 9999px, 47px, 0);
+      	}
+      	95% {
+        	clip: rect(37px, 9999px, 20px, 0);
+      	}
+      	100% {
+        	clip: rect(4px, 9999px, 91px, 0);
+      	}
+    	}
+    	@keyframes glitch-animation-2 {
+      	0% {
+        	clip: rect(65px, 9999px, 100px, 0);
+      	}
+      	5% {
+        	clip: rect(52px, 9999px, 74px, 0);
+      	}
+      	10% {
+        	clip: rect(79px, 9999px, 85px, 0);
+      	}
+      	15.0% {
+        	clip: rect(75px, 9999px, 5px, 0);
+      	}
+      	20% {
+        	clip: rect(67px, 9999px, 61px, 0);
+      	}
+      	25% {
+        	clip: rect(14px, 9999px, 79px, 0);
+      	}
+      	30.0% {
+        	clip: rect(1px, 9999px, 66px, 0);
+      	}
+      	35% {
+        	clip: rect(86px, 9999px, 30px, 0);
+      	}
+      	40% {
+        	clip: rect(23px, 9999px, 98px, 0);
+	     	}
+      	45% {
+        	clip: rect(85px, 9999px, 72px, 0);
+      	}
+      	50% {
+        	clip: rect(71px, 9999px, 75px, 0);
+      	}
+      	55.0% {
+        	clip: rect(2px, 9999px, 48px, 0);
+      	}
+      	60.0% {
+        	clip: rect(30px, 9999px, 16px, 0);
+      	}
+      	65% {
+        	clip: rect(59px, 9999px, 50px, 0);
+      	}
+      	70% {
+        	clip: rect(41px, 9999px, 62px, 0);
+      	}
+      	75% {
+        	clip: rect(2px, 9999px, 82px, 0);
+      	}
+      	80% {
+	      	clip: rect(47px, 9999px, 73px, 0);
+      	}
+      	85.0% {
+        	clip: rect(3px, 9999px, 27px, 0);
+      	}
+      	90% {
+        	clip: rect(26px, 9999px, 55px, 0);
+      	}
+      	95% {
+        	clip: rect(42px, 9999px, 97px, 0);
+      	}
+      	100% {
+        	clip: rect(38px, 9999px, 49px, 0);
+      	}
+    	}
+  	</style>
+	</head>
+
+<!-- Beginning of body -->
+	<body>
+		<!-- Allows me to have TV image over gif background -->
+		<div class="multi-bg"></div>
+		<!-- Header text with my name -->
+		<div class="row">
+			<div class="col-3"></div>
+				<div class="col-6">
+
+				</div>
+			<div class="col-3"></div>
+		</div>
+
+		<div class="divider"></div>
+
+		<!-- Menu choices -->
+		<div class="row">
+			<div class="col-1"></div>
+			<!--Glitch Art -->
+			<div class="col-10">
+				<h2><div class="poetry"><div class="glitch" data-text="When&#160;I&#160;think&#160;of&#160;you&#160;I’m&#160;taken&#160;back&#160;to&#160;the&#160;field&#160;behind&#160;the&#160;private&#160;">
+					<div id="glitchArt">When I think of you I’m taken back to the field behind the private
+</div></div></div></h2>
+			</div>
+			<div class="col-1"></div>
+		</div>
+
+		<div class="row">
+			<div class="col-1"></div>
+			<!--Glitch Art -->
+			<div class="col-10">
+				<h2><div class="poetry"><div class="glitch" data-text="school&#160;by&#160;your&#160;house,&#160;on&#160;the
+					&#160;"><div id="glitchArt">school by your house, on the
+</div></div></div></h2>
+				<h2><div class="poetry"><div class="glitch" data-text="same&#160;road&#160;as&#160;the&#160;pizza&#160;place&#160;where&#160;I"><div id="glitchArt"> same road as the pizza place where I
+					</div></div></div></h2>
+			</div>
+			<div class="col-1"></div>
+		</div>
+
+		<div class="row">
+			<div class="col-1"></div>
+			<!--Glitch Art -->
+			<div class="col-10">
+				<h2><div class="poetry"><div class="glitch" data-text="got&#160;my&#160;first&#160;job&#160;and&#160;the&#160;house&#160;with&#160;the&#160;basement&#160;shows&#160;where&#160;I&#160;had&#160;">
+					<div id="glitchArt">got my first job and the house with the basement shows where I had
+</div></div></div></h2>
+			</div>
+			<div class="col-1"></div>
+		</div>
+
+		<div class="row">
+			<div class="col-1"></div>
+			<!--Glitch Art -->
+			<div class="col-10">
+				<h2><div class="poetry"><div class="glitch" data-text="my&#160;first&#160;kiss.">
+					<div id="glitchArt">my first kiss.
+</div></div></div></h2>
+			</div>
+			<div class="col-1"></div>
+		</div>
+
+		<div class="row">
+			<div class="col-1"></div>
+			<!--Glitch Art -->
+			<div class="col-10">
+				<h2><div class="poetry"><div class="glitch" data-text="The&#160;sun&#160;is&#160;always&#160;setting&#160;(though&#160;i&#160;know&#160;in&#160;truth&#160;it&#160;was&#160;probably&#160;">
+					<div id="glitchArt">The sun is always setting (though i know in truth it was probably
+</div></div></div></h2>
+			</div>
+			<div class="col-1"></div>
+		</div>
+
+		<div class="row">
+			<div class="col-1"></div>
+			<!--Glitch Art -->
+			<div class="col-11">
+				<h2><div class="poetry"><div class="glitch" data-text="beating&#160;down&#160;mostly)&#160;and&#160;I’m&#160;cold&#160;">
+					<div id="glitchArt">beating down mostly) and I’m cold
+</div></div></div></h2>
+	<h2><div class="poetry"><div class="glitch" data-text="but&#160;not&#160;too&#160;cold&#160;and&#160;just&#160;insecure&#160;">
+		<div id="glitchArt"> but not too cold and just insecure
+</div></div></div></h2>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-1"></div>
+			<!--Glitch Art -->
+			<div class="col-11">
+				<h2><div class="poetry"><div class="glitch" data-text="enough&#160;to&#160;run&#160;until&#160;my&#160;lungs&#160;are&#160;dry&#160;and&#160;empty&#160;in&#160;a&#160;no&#45;">
+					<div id="glitchArt">enough to run until my lungs are dry and empty in a no-stakes
+</div></div></div></h2>
+			</div>
+		</div>
+
+<!--		<div class="row">
+			<div class="col-1"></div>
+
+			<div class="col-11">
+				<h2><div class="poetry"><div class="glitch" data-text="winner&#45;take&#45;all&#160;game&#160;of&#160;touch&#160;football.&#160;We&#160;never&#160;got&#160;to&#160;finish.">
+					<div id="glitchArt">winner-take-all game of touch football. We never got to finish.
+</div></div></div></h2>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-1"></div>
+
+			<div class="col-10">
+				<h2><div class="poetry"><div class="glitch" data-text="">
+					<div id="glitchArt">I’m reminded of the sensation of my nails against a coarse, alien landscape, like a craggy mountain
+valley or an autumn leaf left to dry up in winter. I scratch my scabs until the goosebumps on my
+knees are red and don’t rip them off until one side tears and I can feel it pressing up against my skin,
+like an old patch three-quarters-sewn onto a jacket -->
+
+</div></div></div></h2>
+			</div>
+			<div class="col-1"></div>
+		</div>
+
+		<div class="row">
+			<div class="col-5"></div>
+			<div class="col-2"></div>
+				<h2><a href="index.html"><div id="menu6"><div class="glitch" data-text="RETURN"><div id="return">RETURN</div></div></div></a></h2>
+			<div class="col-5"></div>
+		</div>
+
+		<script src="portfolioTV.js"></script>
+
+  </body>
+</html>

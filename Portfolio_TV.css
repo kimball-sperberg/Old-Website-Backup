@@ -1,0 +1,134 @@
+html {
+  background: url(Images/Empty_TV.png),
+  url(Images/Blue_TV.gif) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-position: center;
+      height: 100%;
+}
+
+body {
+  background-color: transparent !important;
+}
+
+@font-face {
+  font-family: 'VCR OSD Mono';
+  src: url('VCR_OSD_MONO_1.001.ttf');
+}
+
+body {
+  font-family: 'VCR OSD Mono';
+  color: white;
+}
+div.return {
+  font-size: 36pt;
+  font-family: 'VCR OSD Mono';
+  color: white;
+}
+h1 {
+  text-align: center;
+  cursor:default;
+  font-size: 36pt;
+}
+
+h2 {
+  text-align: left;
+  display:inline-block;
+}
+
+p {
+ cursor: pointer;
+ text-decoration: none;
+}
+
+#menu, #menu2, #menu3, #menu4, #menu5, #menu6 {
+  font-size: 36pt;
+  cursor:pointer;
+  display:inline-block;
+}
+
+#menu {
+  text-align: center;
+}
+
+a:link {
+    color: white;
+        text-decoration: none;
+}
+
+a:visited {
+    color: white;
+    text-decoration: none;
+}
+
+div.divider {
+    margin-bottom: 60px;
+}
+
+div.smallDivider {
+    margin-bottom: 30px;
+}
+
+a {
+  display: inline-block;
+  cursor: pointer;
+}
+
+a:hover {
+    color: blue;
+    background-color: white;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+a:active {
+    color: blue;
+}
+
+div.glitch {
+  opacity: 0.6;
+}
+
+div.wrap {
+    display:inline-block;
+}
+
+#glitchArt:hover {
+  color: blue;
+  background-color: white;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#stickers:hover {
+  color: blue;
+  background-color: white;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#return:hover {
+  color: blue;
+  background-color: white;
+  text-decoration: none;
+  cursor: pointer;
+}
+div.topSpace {
+  margin-top: 75px;
+}
+
+div.return {
+  text-align: center;
+  margin: 0 auto;
+}
+
+.w3-display-container {
+  position: fixed;
+}
+
+div.poetry {
+  font-size: 20pt;
+  display:inline-block;
+}
