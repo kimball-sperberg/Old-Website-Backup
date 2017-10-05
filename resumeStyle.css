@@ -93,5 +93,5 @@ img {
   height: 333px;
 }
 img:hover {
-    content: url("resumeImages/purpleSquid.png");
+    content: url("Images/purpleSquid.png");
 }
