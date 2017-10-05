@@ -231,19 +231,23 @@ var curIndex = 0;
 var imgDuration = 3000;
 
 function slideShow() {
-				document.addEventListener("keydown", function(event) {
-					if (event.which == '32' || event.which === 39 || event.which === 38) {
-						curIndex++;
-						if (curIndex == imgArray.length) { curIndex = 0; }
-						document.getElementById('slider').src = imgArray[curIndex];
-					} else if (event.which === 37 || event.which === 40) {
-						curIndex--;
-						if (curIndex == -1) { curIndex = imgArray.length; }
-						document.getElementById('slider').src = imgArray[curIndex];
-					}
-		});
+	document.addEventListener("keydown", function(event) {
+		if (event.key == ' ' || event.key === 'ArrowRight' || event.key === 'ArrowUp' || event.key === 'Enter' || event.key === 'Tab') {
+			curIndex++;
+			if (curIndex == imgArray.length) { curIndex = 0; }
+			document.getElementById('slider').src = imgArray[curIndex];
+		} else if (event.key === 'ArrowLeft' || event.key === 'ArrowDown') {
+			if (curIndex == 0) { curIndex = imgArray.length; }
+			curIndex--;
+			document.getElementById('slider').src = imgArray[curIndex];
+		}
+	});
+	document.getElementById('slider').addEventListener('click', function (event) {
+		curIndex++;
+		if (curIndex == imgArray.length) { curIndex = 0; }
+		document.getElementById('slider').src = imgArray[curIndex];
+	});
 }
-
 
 // function slideShow() {
 //     document.getElementById('slider').className += "fadeOut";
