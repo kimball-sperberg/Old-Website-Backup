@@ -221,7 +221,7 @@ div.smallDivider {
     margin-bottom: 30px;
 }
 div.tinyDivider {
-    margin-top: 0px;
+    margin-top: 20px;
 }
 
 a {
@@ -240,9 +240,6 @@ a:active {
     color: blue;
 }
 
-div.glitch {
-  opacity: 0.2;
-}
 
 div.wrap {
     display:inline-block;
