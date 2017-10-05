@@ -241,7 +241,7 @@ var imgDuration = 3000;
 
 function slideShow() {
 	document.addEventListener("keydown", function(event) {
-		if (event.key == ' ' || event.key === 'ArrowRight' || event.key === 'ArrowUp') {
+		if (event.key == ' ' || event.key === 'ArrowRight' || event.key === 'ArrowUp' || event.key === 'Enter' || event.key === 'Return' || event.key === 'Tab') {
 			curIndex++;
 			if (curIndex == imgArray.length) { curIndex = 0; }
 			document.getElementById('slider').src = imgArray[curIndex];
