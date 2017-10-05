@@ -10,7 +10,7 @@
 		<!-- Bootstrap's CSS -->
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
 		<!-- My CSS -->
-		<link rel="stylesheet" type="text/css" href="Portfolio_Glitch_Art_Style.css">
+		<link rel="stylesheet" type="text/css" href="Portfolio_TV.css">
 		<!-- jQuery -->
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 		<script src="jquery-3.2.1.min.js"></script>
@@ -18,23 +18,33 @@
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
 	<style>
 
+			html {
+			  background: url(Images/Empty_TV.png),
+			  url(Images/Black_Static.gif) no-repeat center center fixed;
+			  -webkit-background-size: cover;
+			  -moz-background-size: cover;
+			  -o-background-size: cover;
+			  background-size: cover;
+			  background-position: center;
+			      height: 100%;
+			}
 			h1 {
 				text-align: center;
 			}
 
     	.glitch {
-      	color: white;
+      	color: limegreen;
     	}
 
     	.glitch {
-      	position: relative;
+      	position: absolute;
 				opacity: 0.6;
     	}
 
     	.glitch:after {
       	animation: glitch-animation 1s infinite linear alternate-reverse;
       	clip: rect( 0, 900px, 0, 0 );
-      	color: green;
+      	color: limegreen;
       	content: attr( data-text );
       	left: 2px;
 				top: 2px;
@@ -54,7 +64,7 @@
 				top: -2px;
       	overflow: hidden;
       	position: absolute;
-      	text-shadow: 1px 0 blue;
+      	text-shadow: 1px 0 limegreen;
       	top: 0;
 
     	}
@@ -200,10 +210,11 @@
 			<div class="col-5"></div>
 			<!--RETURN -->
 			<div class="col-2">
-				<h2><div id="menu6"><div class="glitch" data-text="RETURN"><a href="index.html"><div id="return">RETURN</div></a></div></div></h2>
+				<h2><a href="index.html"><div id="return" class="glitch" data-text="RETURN">RETURN</div></a></h2>
 			</div>
 			<div class="col-5"></div>
 		</div>
+
 
 
 <div class="w3-content w3-section" style="max-width:700px">
