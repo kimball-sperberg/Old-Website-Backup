@@ -1,0 +1,97 @@
+body {
+  margin-top: 60px;
+  font-family: 'Hind';
+  color:black;
+}
+a:link {
+  color: black;
+  text-decoration: none;
+}
+a:visited {
+  color: black;
+}
+a:hover {
+  color: #0000ff;
+}
+div.primaryInfo {
+  text-align: center;
+}
+h1 {
+  font-weight: 500;
+  font-size: 60px;
+  line-height: 0.8;
+}
+h2 {
+  font-weight: 500;
+  font-size: 36px;
+}
+h3 {
+  font-weight: 500;
+  font-size: 26px;
+
+}
+h4 {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 1.3;
+}
+div.col-7 {
+  padding-top: 60px;
+  padding-left: 50px;
+}
+div.col-5 {
+  padding-top: 60px;
+  padding-right: 50px;
+}
+h5 {
+  font-size: 42px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+/* These divs aren't very well named ¯\_(ツ)_/¯ */
+div.positionTitle {
+  padding-left:0;
+  font-size: 36px;
+  font-weight: 500;
+  line-height: 0.7;
+}
+div.employer {
+  padding-left:0;
+  font-size: 28px;
+  font-weight: 400;
+  line-height: 0.7;
+}
+div.locationEmployed {
+  padding-left:0;
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 0.6;
+  letter-spacing: 4px;
+}
+div.timeEmployed {
+  padding-left:0;
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 0.5;
+  letter-spacing: 4px;
+}
+div.positionDescription {
+  padding-left:0;
+  font-size: 16px;
+}
+div.skillsDescription {
+  padding-left:0;
+  font-weight: 400;
+  font-size: 28px;
+}
+img {
+  display: inline-block;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 215px;
+  height: 333px;
+}
+img:hover {
+    content: url("resumeImages/purpleSquid.png");
+}
