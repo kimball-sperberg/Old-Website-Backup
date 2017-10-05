@@ -25,7 +25,7 @@
     	}
 
     	.glitch {
-      	position: relative;
+      	position: absolute;
     	}
 
     	.glitch:after {
@@ -36,7 +36,7 @@
       	left: 2px;
       	overflow: hidden;
       	position: absolute;
-      	text-shadow: -1px 0 red;
+      	text-shadow: -2px 0 red;
       	top: 0;
 				opacity: 0.6;
     	}
@@ -49,7 +49,7 @@
       	left: -2px;
       	overflow: hidden;
       	position: absolute;
-      	text-shadow: 1px 0 green;
+      	text-shadow: 2px 0 limegreen;
       	top: 0;
 				opacity: 0.6;
     	}
@@ -189,15 +189,17 @@
 
 <!-- Beginning of body -->
 	<body>
+		<!-- This div fixes a bootstrap bug -->
+		<div class="container-fluid">
 		<!-- Allows me to have TV image over gif background -->
 		<div class="multi-bg"></div>
 		<!-- Header text with my name -->
 		<div class="row">
-			<div class="col-3"></div>
-				<div class="col-6">
+			<div class="col-4"></div>
+				<div class="col-4">
 					<h1><br><br><div class="glitch" data-text="SAM&#160;KIMBALL'S&#160;PORTFOLIO">SAM&#160;KIMBALL'S&#160;PORTFOLIO</div></h1>
 				</div>
-			<div class="col-3"></div>
+			<div class="col-4"></div>
 		</div>
 
 		<div class="divider"></div>
@@ -245,6 +247,6 @@
 		</div>
 
 		<script src="portfolioTV.js"></script>
-
+	</div>
   </body>
 </html>
