@@ -1,249 +1,213 @@
-<!DOCTYPE html>
 <html lang="en">
+<!-- www.samks.info -->
 	<head>
-		<title>Portfolio TV</title>
-		<!-- Bootstrap's CSS -->
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
-		<!-- My CSS -->
-		<link rel="stylesheet" type="text/css" href="Portfolio_TV.css">
-		<!-- jQuery -->
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-		<script src="jquery-3.2.1.min.js"></script>
-		<!-- Glitch text script written by Lea Verou -->
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
-	<style>
-    	/*body {
-      	background-color: black;
-    	}*/
 
-			h1 {
-				text-align: center;
-			}
+		<title>New Portfolio Home Page</title>
+		<style>
 
-    	.glitch {
-      	color: white;
-    	}
 
-    	.glitch {
-      	position: absolute;
-    	}
+		@font-face {
+		  font-family: 'VCR OSD Mono';
+		  src: url('VCR_OSD_MONO_1.001.ttf');
+		}
 
-    	.glitch:after {
-      	animation: glitch-animation 2s infinite linear alternate-reverse;
-      	clip: rect( 0, 900px, 0, 0 );
-      	color: white;
-      	content: attr( data-text );
-      	left: 2px;
-      	overflow: hidden;
-      	position: absolute;
-      	text-shadow: -2px 0 red;
-      	top: 0;
-				opacity: 0.6;
-    	}
+		body {
+		  font-family: 'VCR OSD Mono';
+		  color: white;
+		}
+	    	/*body {
+	      	background-color: black;
+	    	}*/
 
-    	.glitch:before {
-	     	animation: glitch-animation-2 3s infinite linear alternate-reverse;
-      	clip: rect( 0, 900px, 0, 0 );
-      	color: white;
-      	content: attr( data-text );
-      	left: -2px;
-      	overflow: hidden;
-      	position: absolute;
-      	text-shadow: 2px 0 limegreen;
-      	top: 0;
-				opacity: 0.6;
-    	}
+				div.glitch {
+				  opacity: 0.6;
+				}
+	    	.glitch {
+	      	color: green;
+	    	}
 
-    	@keyframes glitch-animation {
-      	0% {
-        	clip: rect(42px, 9999px, 44px, 0);
-      	}
-      	5% {
-        	clip: rect(12px, 9999px, 59px, 0);
-      	}
-      	10% {
-        	clip: rect(48px, 9999px, 29px, 0);
-      	}
-      	15.0% {
-        	clip: rect(42px, 9999px, 73px, 0);
-      	}
-      	20% {
-        	clip: rect(63px, 9999px, 27px, 0);
-      	}
-      	25% {
-        	clip: rect(34px, 9999px, 55px, 0);
-      	}
-      	30.0% {
-        	clip: rect(86px, 9999px, 73px, 0);
-      	}
-      	35% {
-        	clip: rect(20px, 9999px, 20px, 0);
-	     	}
-      	40% {
-        	clip: rect(26px, 9999px, 60px, 0);
-      	}
-      	45% {
-        	clip: rect(25px, 9999px, 66px, 0);
-      	}
-      	50% {
-        	clip: rect(57px, 9999px, 98px, 0);
-      	}
-      	55.0% {
-        	clip: rect(5px, 9999px, 46px, 0);
-      	}
-	     	60.0% {
-        	clip: rect(82px, 9999px, 31px, 0);
-      	}
-      	65% {
-        	clip: rect(54px, 9999px, 27px, 0);
-      	}
-      	70% {
-        	clip: rect(28px, 9999px, 99px, 0);
-      	}
-      	75% {
-        	clip: rect(45px, 9999px, 69px, 0);
-      	}
-      	80% {
-        	clip: rect(23px, 9999px, 85px, 0);
-      	}
-      	85.0% {
-        	clip: rect(54px, 9999px, 84px, 0);
-      	}
-      	90% {
-        	clip: rect(45px, 9999px, 47px, 0);
-      	}
-      	95% {
-        	clip: rect(37px, 9999px, 20px, 0);
-      	}
-      	100% {
-        	clip: rect(4px, 9999px, 91px, 0);
-      	}
-    	}
-    	@keyframes glitch-animation-2 {
-      	0% {
-        	clip: rect(65px, 9999px, 100px, 0);
-      	}
-      	5% {
-        	clip: rect(52px, 9999px, 74px, 0);
-      	}
-      	10% {
-        	clip: rect(79px, 9999px, 85px, 0);
-      	}
-      	15.0% {
-        	clip: rect(75px, 9999px, 5px, 0);
-      	}
-      	20% {
-        	clip: rect(67px, 9999px, 61px, 0);
-      	}
-      	25% {
-        	clip: rect(14px, 9999px, 79px, 0);
-      	}
-      	30.0% {
-        	clip: rect(1px, 9999px, 66px, 0);
-      	}
-      	35% {
-        	clip: rect(86px, 9999px, 30px, 0);
-      	}
-      	40% {
-        	clip: rect(23px, 9999px, 98px, 0);
-	     	}
-      	45% {
-        	clip: rect(85px, 9999px, 72px, 0);
-      	}
-      	50% {
-        	clip: rect(71px, 9999px, 75px, 0);
-      	}
-      	55.0% {
-        	clip: rect(2px, 9999px, 48px, 0);
-      	}
-      	60.0% {
-        	clip: rect(30px, 9999px, 16px, 0);
-      	}
-      	65% {
-        	clip: rect(59px, 9999px, 50px, 0);
-      	}
-      	70% {
-        	clip: rect(41px, 9999px, 62px, 0);
-      	}
-      	75% {
-        	clip: rect(2px, 9999px, 82px, 0);
-      	}
-      	80% {
-	      	clip: rect(47px, 9999px, 73px, 0);
-      	}
-      	85.0% {
-        	clip: rect(3px, 9999px, 27px, 0);
-      	}
-      	90% {
-        	clip: rect(26px, 9999px, 55px, 0);
-      	}
-      	95% {
-        	clip: rect(42px, 9999px, 97px, 0);
-      	}
-      	100% {
-        	clip: rect(38px, 9999px, 49px, 0);
-      	}
-    	}
-  	</style>
-	</head>
+	    	.glitch {
+	      	position: relative;
+	    	}
 
-<!-- Beginning of body -->
-	<body>
-		<!-- This div fixes a bootstrap bug -->
-		<div class="container-fluid">
-		<!-- Allows me to have TV image over gif background -->
-		<div class="multi-bg"></div>
-		<!-- Header text with my name -->
-		<div class="row">
-			<div class="col-md-4 col-md-offset-4"></div>
-					<h1><br><br><div class="glitch" data-text="SAM&#160;KIMBALL'S&#160;PORTFOLIO">SAM&#160;KIMBALL'S&#160;PORTFOLIO</div></h1>
-		</div>
+				.glitch:after {
+	      	animation: glitch-animation 1s infinite linear alternate-reverse;
+	      	clip: rect( 0, 900px, 0, 0 );
+	      	color: green;
+	      	content: attr( data-text );
+	      	left: 3px;
+					top: 2px;
+	      	overflow: hidden;
+	      	position: absolute;
+	      	text-shadow: -1px 0 black;
+	      	top: 0;
 
-		<div class="divider"></div>
+	    	}
 
-		<!-- Menu choices -->
-		<div class="row">
-			<div class="col-2"></div>
-			<!--Glitch Art -->
-			<div class="col-3">
-				<h2><a href="Portfolio_Glitch_Art_2.html"><div id="menu"><div class="glitch" data-text="GLITCH&#160;ART"><div id="glitchArt">GLITCH&#160;ART</div></div></div></a></h2>
-			</div>
-			<div class="col-7"></div>
-		</div>
+	    	.glitch:before {
+		     	animation: glitch-animation-2 2s infinite linear alternate-reverse;
+	      	clip: rect( 0, 900px, 0, 0 );
+	      	color: green;
+	      	content: attr( data-text );
+	      	left: -2px;
+					top: -2px;
+	      	overflow: hidden;
+	      	position: absolute;
+	      	text-shadow: 1px 0 black;
+	      	top: 0;
 
-		<div class="row">
-			<div class="col-2"></div>
-			<!--Stickers -->
-			<div class="col-3">
-				<h2><a href="Portfolio_Stickers.html"><div id="menu2"><div class="glitch" data-text="STICKERS"><div id="stickers">STICKERS</div></div></div></a></h2>
-			</div>
-		</div>
+	    	}
 
-		<div class="row">
-			<div class="col-2"></div>
-			<!-- Digital Art -->
-			<div class="col-3">
-				<h2><a href="Portfolio_Digital_Art.html"><div id="menu3"><div class="glitch" data-text="PHOTOS"><div id="digitalArt">PHOTOS</div></div></div></a></h2>
-			</div>
-		</div>
+	    	@keyframes glitch-animation {
+	      	0% {
+	        	clip: rect(42px, 9999px, 44px, 0);
+	      	}
+	      	5% {
+	        	clip: rect(12px, 9999px, 59px, 0);
+	      	}
+	      	10% {
+	        	clip: rect(48px, 9999px, 29px, 0);
+	      	}
+	      	15.0% {
+	        	clip: rect(42px, 9999px, 73px, 0);
+	      	}
+	      	20% {
+	        	clip: rect(63px, 9999px, 27px, 0);
+	      	}
+	      	25% {
+	        	clip: rect(34px, 9999px, 55px, 0);
+	      	}
+	      	30.0% {
+	        	clip: rect(86px, 9999px, 73px, 0);
+	      	}
+	      	35% {
+	        	clip: rect(20px, 9999px, 20px, 0);
+		     	}
+	      	40% {
+	        	clip: rect(26px, 9999px, 60px, 0);
+	      	}
+	      	45% {
+	        	clip: rect(25px, 9999px, 66px, 0);
+	      	}
+	      	50% {
+	        	clip: rect(57px, 9999px, 98px, 0);
+	      	}
+	      	55.0% {
+	        	clip: rect(5px, 9999px, 46px, 0);
+	      	}
+		     	60.0% {
+	        	clip: rect(82px, 9999px, 31px, 0);
+	      	}
+	      	65% {
+	        	clip: rect(54px, 9999px, 27px, 0);
+	      	}
+	      	70% {
+	        	clip: rect(28px, 9999px, 99px, 0);
+	      	}
+	      	75% {
+	        	clip: rect(45px, 9999px, 69px, 0);
+	      	}
+	      	80% {
+	        	clip: rect(23px, 9999px, 85px, 0);
+	      	}
+	      	85.0% {
+	        	clip: rect(54px, 9999px, 84px, 0);
+	      	}
+	      	90% {
+	        	clip: rect(45px, 9999px, 47px, 0);
+	      	}
+	      	95% {
+	        	clip: rect(37px, 9999px, 20px, 0);
+	      	}
+	      	100% {
+	        	clip: rect(4px, 9999px, 91px, 0);
+	      	}
+	    	}
+	    	@keyframes glitch-animation-2 {
+	      	0% {
+	        	clip: rect(65px, 9999px, 100px, 0);
+	      	}
+	      	5% {
+	        	clip: rect(52px, 9999px, 74px, 0);
+	      	}
+	      	10% {
+	        	clip: rect(79px, 9999px, 85px, 0);
+	      	}
+	      	15.0% {
+	        	clip: rect(75px, 9999px, 5px, 0);
+	      	}
+	      	20% {
+	        	clip: rect(67px, 9999px, 61px, 0);
+	      	}
+	      	25% {
+	        	clip: rect(14px, 9999px, 79px, 0);
+	      	}
+	      	30.0% {
+	        	clip: rect(1px, 9999px, 66px, 0);
+	      	}
+	      	35% {
+	        	clip: rect(86px, 9999px, 30px, 0);
+	      	}
+	      	40% {
+	        	clip: rect(23px, 9999px, 98px, 0);
+		     	}
+	      	45% {
+	        	clip: rect(85px, 9999px, 72px, 0);
+	      	}
+	      	50% {
+	        	clip: rect(71px, 9999px, 75px, 0);
+	      	}
+	      	55.0% {
+	        	clip: rect(2px, 9999px, 48px, 0);
+	      	}
+	      	60.0% {
+	        	clip: rect(30px, 9999px, 16px, 0);
+	      	}
+	      	65% {
+	        	clip: rect(59px, 9999px, 50px, 0);
+	      	}
+	      	70% {
+	        	clip: rect(41px, 9999px, 62px, 0);
+	      	}
+	      	75% {
+	        	clip: rect(2px, 9999px, 82px, 0);
+	      	}
+	      	80% {
+		      	clip: rect(47px, 9999px, 73px, 0);
+	      	}
+	      	85.0% {
+	        	clip: rect(3px, 9999px, 27px, 0);
+	      	}
+	      	90% {
+	        	clip: rect(26px, 9999px, 55px, 0);
+	      	}
+	      	95% {
+	        	clip: rect(42px, 9999px, 97px, 0);
+	      	}
+	      	100% {
+	        	clip: rect(38px, 9999px, 49px, 0);
+	      	}
+	    	}
 
-		<div class="row">
-			<div class="col-2"></div>
-			<!-- Poetry -->
-			<div class="col-3">
-				<h2><a href="Portfolio_Poetry.html"><div id="menu4"><div class="glitch" data-text="POETRY"><div id="poetry">POETRY</div></div></div></a></h2>
-			</div>
-		</div>
+    body {
+	background-color:black;
+}
 
-		<div class="row">
-			<div class="col-2"></div>
-			<!-- Poetry -->
-			<div class="col-3">
-				<h2><a href="Resume.html"><div id="menu5"><div class="glitch" data-text="RESUME"><div id="about">RESUME</div></div></div></a></h2>
-			</div>
-		</div>
+img{
+	display: block;
+	margin-left: auto;
+    margin-right: auto
+}
+</style>
+</head>
+<body>
+<h1><div class="glitch" data-text="SAM&#160;KIMBALL'S&#160;PORTFOLIO">SAM&#160;KIMBALL'S&#160;PORTFOLIO</div></h1>
+<img src="Images/tvs_linedup_7.png" alt="" usemap="#Map" />
+<map name="Map" id="Map">
+<area alt="" title="" href="Portfolio_Glitch_Art_2.html" shape="poly" coords="204,374,317,399,345,354,347,227,253,201,183,271" />
+<area alt="" title="" href="Portfolio_Stickers.html" shape="poly" coords="373,405,538,405,549,383,564,375,570,294,560,208,528,175,516,172,498,149,417,149,398,173,386,175,350,206,341,289,348,373,362,378" />
+<area alt="" title="" href="About.html" shape="poly" coords="565,353,594,401,709,371,728,271,660,200,564,228" />
 
-		<script src="portfolioTV.js"></script>
-	</div>
-  </body>
-</html>
+</map>
+    </body>
+  </html>
