@@ -1,0 +1,139 @@
+<html>
+  <head>
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400;300' rel='stylesheet' type='text/css'>
+    <link href='style.css' rel='stylesheet'>
+
+  </head>
+  <body>
+  <style>
+  /* Initial body */
+body {
+  left: 0;
+  margin: 0;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Initial menu */
+.menu {
+  background: #202024 url('http://s3.amazonaws.com/codecademy-content/courses/ltp2/img/uber/black-thread.png') repeat left top;
+  left: -25%;  /* start off behind the scenes */
+  height: 100%;
+  position: fixed;
+  width: 25%;
+}
+
+/* Basic styling */
+
+.jumbotron {
+  height: 50%;
+  width: 50%
+}
+.jumbotron {
+  display:block;
+  margin:auto;
+}
+
+.menu ul {
+  border-top: 1px solid #636366;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu li {
+  border-bottom: 1px solid #636366;
+  font-family: 'Open Sans', sans-serif;
+  line-height: 45px;
+  padding-bottom: 3px;
+  padding-left: 20px;
+  padding-top: 3px;
+}
+
+.menu a {
+  color: #fff;
+  font-size: 15px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.icon-close {
+  cursor: pointer;
+  padding-left: 10px;
+  padding-top: 10px;
+}
+
+.icon-menu {
+  color: #fff;
+  cursor: pointer;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  padding-bottom: 25px;
+  padding-left: 25px;
+  padding-top: 25px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.icon-menu i {
+  margin-right: 5px;
+}
+</style>
+    <div class="menu">
+
+      <!-- Menu icon -->
+      <div class="icon-close">
+        <img src="http://s3.amazonaws.com/codecademy-content/courses/ltp2/img/uber/close.png">
+      </div>
+
+      <!-- Menu -->
+      <ul>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="#">Help</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </div>
+
+    <!-- Main body -->
+    <img class="jumbotron" src="http://s3.amazonaws.com/codecademy-content/courses/ltp2/img/uber/bg.png">
+
+      <div class="icon-menu">
+        <i class="fa fa-bars"></i>
+        Menu
+      </div>
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script>
+      var main = function() {
+  /* Push the body and the nav over */
+  $('.icon-menu').click(function() {
+    $('.menu').animate({
+      left: "0px"
+    }, 400);
+
+    $('body').animate({
+      left: "12.5%"
+    }, 400);
+  });
+
+  /* Then push them back */
+  $('.icon-close').click(function() {
+    $('.menu').animate({
+      left: "-25%"
+    }, 400);
+
+    $('body').animate({
+      left: "0px"
+    }, 400);
+  });
+};
+
+
+$(document).ready(main);
+
+    </script>
+
+  </body>
+</html>
