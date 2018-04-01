@@ -79,6 +79,45 @@ body {
   margin-right: 5px;
 }
 
+    @import url(https://fonts.googleapis.com/css?family=Istok+Web);
+@keyframes slidy {
+0% { left: 0%; }
+20% { left: 0%; }
+25% { left: -100%; }
+45% { left: -100%; }
+50% { left: -200%; }
+70% { left: -200%; }
+75% { left: -300%; }
+95% { left: -300%; }
+100% { left: -400%; }
+}
+* {
+  box-sizing: border-box;
+}
+body, figure { 
+  margin: 0; background: #101010;
+  font-family: Istok Web, sans-serif;
+  font-weight: 100;
+}
+div#captioned-gallery { 
+  width: 100%; overflow: hidden; 
+}
+figure.slider { 
+  position: relative; width: 500%;
+  font-size: 0; animation: 30s slidy infinite; 
+}
+figure.slider figure { 
+  width: 20%; height: auto;
+  display: inline-block;  position: inherit; 
+}
+figure.slider img { width: 100%; height: auto; }
+figure.slider figure figcaption { 
+  position: absolute; bottom: 0;
+  background: rgba(0,0,0,0.4);
+  color: #fff; width: 100%;
+  font-size: 2rem; padding: .6rem; 
+}
+
 </style>
     <div class="menu">
 
@@ -104,10 +143,30 @@ body {
         Menu
       </div>
     
-    <div class="bxslider">
-  <div><img src="https://imgur.com/SGA0cVb" title="Funky roots"></div>
-  <div><img src="https://imgur.com/A01Eazx" title="The long and winding road"></div>
-  <div><img src="https://imgur.com/8KIIlxy" title="Happy trees"></div>
+    <base href="https://imgur.com/8KIIlxy">
+<div id="captioned-gallery">
+	<figure class="slider">
+		<figure>
+			<img src="https://imgur.com/lr5ynU7" alt>
+			<figcaption>Hobbiton, New Zealand</figcaption>
+		</figure>
+		<figure>
+			<img src="https://imgur.com/N5LwuA0" alt>
+			<figcaption>Wanaka, New Zealand</figcaption>
+		</figure>
+		<figure>
+			<img src="https://imgur.com/4BqK2yQ" alt>
+			<figcaption>Utah, United States</figcaption>
+		</figure>
+		<figure>
+			<img src="https://imgur.com/SGA0cVb" alt>
+			<figcaption>Bryce Canyon, Utah, United States</figcaption>
+		</figure>
+		<figure>
+			<img src="https://imgur.com/0vjZkft" alt>
+			<figcaption>Hobbiton, New Zealand</figcaption>
+		</figure>
+	</figure>
 </div>
  
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
@@ -139,14 +198,6 @@ body {
 
 $(document).ready(main);
 
-
-            $(function(){
-  $('.bxslider').bxSlider({
-    mode: 'fade',
-    captions: true,
-    slideWidth: 600
-  });
-});
     </script>
   </body>
 </html>
