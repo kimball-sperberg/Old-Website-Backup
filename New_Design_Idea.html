@@ -78,46 +78,6 @@ body {
 .icon-menu i {
   margin-right: 5px;
 }
-
-    @import url(https://fonts.googleapis.com/css?family=Istok+Web);
-@keyframes slidy {
-0% { left: 0%; }
-20% { left: 0%; }
-25% { left: -100%; }
-45% { left: -100%; }
-50% { left: -200%; }
-70% { left: -200%; }
-75% { left: -300%; }
-95% { left: -300%; }
-100% { left: -400%; }
-}
-* {
-  box-sizing: border-box;
-}
-body, figure { 
-  margin: 0; background: #101010;
-  font-family: Istok Web, sans-serif;
-  font-weight: 100;
-}
-div#captioned-gallery { 
-  width: 100%; overflow: hidden; 
-}
-figure.slider { 
-  position: relative; width: 500%;
-  font-size: 0; animation: 30s slidy infinite; 
-}
-figure.slider figure { 
-  width: 20%; height: auto;
-  display: inline-block;  position: inherit; 
-}
-figure.slider img { width: 100%; height: auto; }
-figure.slider figure figcaption { 
-  position: absolute; bottom: 0;
-  background: rgba(0,0,0,0.4);
-  color: #fff; width: 100%;
-  font-size: 2rem; padding: .6rem; 
-}
-
 </style>
     <div class="menu">
 
@@ -142,33 +102,27 @@ figure.slider figure figcaption {
         <i class="fa fa-bars"></i>
         Menu
       </div>
-    
-    <base href="https://imgur.com/8KIIlxy">
-<div id="captioned-gallery">
-	<figure class="slider">
-		<figure>
-			<img src="https://imgur.com/lr5ynU7" alt>
-			<figcaption>Hobbiton, New Zealand</figcaption>
-		</figure>
-		<figure>
-			<img src="https://imgur.com/N5LwuA0" alt>
-			<figcaption>Wanaka, New Zealand</figcaption>
-		</figure>
-		<figure>
-			<img src="https://imgur.com/4BqK2yQ" alt>
-			<figcaption>Utah, United States</figcaption>
-		</figure>
-		<figure>
-			<img src="https://imgur.com/SGA0cVb" alt>
-			<figcaption>Bryce Canyon, Utah, United States</figcaption>
-		</figure>
-		<figure>
-			<img src="https://imgur.com/0vjZkft" alt>
-			<figcaption>Hobbiton, New Zealand</figcaption>
-		</figure>
-	</figure>
-</div>
  
+<!-- Start CSS Slideshow BODY section -->
+<div id="wowslider-container1">
+<div class="ws_images"><ul>
+		<li><img src="data1/images/hongkong1081704.jpg" alt="Hong Kong" title="Hong Kong" id="wows1_0"/></li>
+		<li><img src="data1/images/london830775.jpg" alt="London" title="London" id="wows1_1"/></li>
+		<li><img src="data1/images/new_york.jpg" alt="New York" title="New York" id="wows1_2"/></li>
+		<li><img src="data1/images/shanghai.jpg" alt="Shanghai" title="Shanghai" id="wows1_3"/></li>
+	</ul></div>
+	<div class="ws_bullets"><div>
+		<a href="#" title="Hong Kong"><span><img src="data1/tooltips/hongkong1081704.jpg" alt="Hong Kong"/>1</span></a>
+		<a href="#" title="London"><span><img src="data1/tooltips/london830775.jpg" alt="London"/>2</span></a>
+		<a href="#" title="New York"><span><img src="data1/tooltips/new_york.jpg" alt="New York"/>3</span></a>
+		<a href="#" title="Shanghai"><span><img src="data1/tooltips/shanghai.jpg" alt="Shanghai"/>4</span></a>
+	</div></div>
+<div class="ws_shadow"></div>
+</div>	
+<script type="text/javascript" src="engine1/wowslider.js"></script>
+<script type="text/javascript" src="engine1/script.js"></script>
+<!-- End CSS Slider BODY section -->
+	  
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script>
       var main = function() {
