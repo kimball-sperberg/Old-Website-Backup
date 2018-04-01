@@ -5,8 +5,11 @@
     <link href='style.css' rel='stylesheet'>
 
   </head>
-  <body>
-  <style>
+	
+ <body>
+	 
+ <style>
+	 
   /* Initial body */
 body {
   left: 0;
@@ -24,7 +27,6 @@ body {
 }
 
 /* Basic styling */
-
 .jumbotron {
   height: 50%;
   width: 50%
@@ -79,14 +81,15 @@ body {
   margin-right: 5px;
 }
 </style>
+	  
     <div class="menu">
 
-      <!-- Menu icon -->
+<!-- Menu icon -->
       <div class="icon-close">
         <img src="http://s3.amazonaws.com/codecademy-content/courses/ltp2/img/uber/close.png">
       </div>
 
-      <!-- Menu -->
+<!-- Menu -->
       <ul>
         <li><a href="#">About</a></li>
         <li><a href="#">Blog</a></li>
@@ -95,20 +98,22 @@ body {
       </ul>
     </div>
 
-    <!-- Main body -->
-    <img class="jumbotron" src="http://s3.amazonaws.com/codecademy-content/courses/ltp2/img/uber/bg.png">
-
+	  
+<!-- Main body -->
+   	<div class="jumbotron">
+		<img class="mySlides" src="Images/Glitch_Art_1.png">
+		<img class="mySlides" src="Images/Glitch_Art_2.png">
+		<img class="mySlides" src="Images/Glitch_Art_3.png">
+		<img class="mySlides" src="Images/Glitch_Art_4.png">
+		<button class="w3-button w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+		<button class="w3-button w3-display-right" onclick="plusDivs(+1)">&#10095;</button>
+	</div>    
       <div class="icon-menu">
         <i class="fa fa-bars"></i>
         Menu
       </div>
  
-<img class="mySlides" src="Images/Glitch_Art_1.png">
-<img class="mySlides" src="Images/Glitch_Art_2.png">
-<img class="mySlides" src="Images/Glitch_Art_3.png">
-<img class="mySlides" src="Images/Glitch_Art_4.png">
-<button class="w3-button w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
-<button class="w3-button w3-display-right" onclick="plusDivs(+1)">&#10095;</button>
+
 	  
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script>
