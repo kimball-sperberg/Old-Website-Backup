@@ -3,8 +3,6 @@
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:400;300' rel='stylesheet' type='text/css'>
     <link href='style.css' rel='stylesheet'>
-	    <link rel="stylesheet" href="../dist/css/swiper.min.css">
-
 
   </head>
 	
@@ -20,7 +18,6 @@ body {
   margin: 0;
   position: relative;
 }
-
 /* Initial menu */
 .menu {
   background: #202024 url('http://s3.amazonaws.com/codecademy-content/courses/ltp2/img/uber/black-thread.png') repeat left top;
@@ -29,7 +26,6 @@ body {
   position: fixed;
   width: 25%;
 }
-
 /* Basic styling */
 .jumbotron {
 	width: 50%;
@@ -46,7 +42,6 @@ body {
   margin: 0;
   padding: 0;
 }
-
 .menu li {
   border-bottom: 1px solid #636366;
   font-family: 'Open Sans', sans-serif;
@@ -55,20 +50,17 @@ body {
   padding-left: 20px;
   padding-top: 3px;
 }
-
 .menu a {
   color: #fff;
   font-size: 15px;
   text-decoration: none;
   text-transform: uppercase;
 }
-
 .icon-close {
   cursor: pointer;
   padding-left: 10px;
   padding-top: 10px;
 }
-
 .icon-menu {
   float: left; 
   color: #fff;
@@ -83,11 +75,9 @@ body {
 	display: inline-block;
     text-align:left;
 }
-
 .icon-menu i {
   margin-right: 5px;
 }
-
 .centered-header {
   margin:auto;
   text-align: center;
@@ -98,33 +88,7 @@ body {
   font-family: 'VCR OSD Mono';
   src: url('VCR_OSD_MONO_1.001.ttf');
 }
-
 	 
-	 
-	 
-    
-    .swiper-container {
-      width: 100%;
-      height: 100%;
-    }
-    .swiper-slide {
-      text-align: center;
-      font-size: 18px;
-      background: #fff;
-      /* Center slide text vertically */
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: -webkit-flex;
-      display: flex;
-      -webkit-box-pack: center;
-      -ms-flex-pack: center;
-      -webkit-justify-content: center;
-      justify-content: center;
-      -webkit-box-align: center;
-      -ms-flex-align: center;
-      -webkit-align-items: center;
-      align-items: center;
-    }	 
 </style>
 	  
     <div class="menu">
@@ -157,55 +121,40 @@ body {
 	  	</p>
 	 </div>
 	 
-<!-- Swiper -->
-  <div class="swiper-container">
-    <div class="swiper-wrapper">
-      <div class="swiper-slide">Slide 1</div>
-      <div class="swiper-slide">Slide 2</div>
-      <div class="swiper-slide">Slide 3</div>
-      <div class="swiper-slide">Slide 4</div>
-      <div class="swiper-slide">Slide 5</div>
-      <div class="swiper-slide">Slide 6</div>
-      <div class="swiper-slide">Slide 7</div>
-      <div class="swiper-slide">Slide 8</div>
-      <div class="swiper-slide">Slide 9</div>
-      <div class="swiper-slide">Slide 10</div>
-    </div>
-    <!-- Add Pagination -->
-    <div class="swiper-pagination"></div>
-    <!-- Add Arrows -->
-    <div class="swiper-button-next"></div>
-    <div class="swiper-button-prev"></div>
-  </div>
+   	<div class="row jumbotron w3-content w3-display-container">
+		<img class="mySlides" src="Images/Lady_Glitch-1.png" style="width:100%">
+		<img class="mySlides" src="Images/Lady_Glitch-3-1.png" style="width:100%">
+		<img class="mySlides" src="Images/What_Happened.png" style="width:100%">
+		<img class="mySlides" src="Images/Lady_Glitch-5.png" style="width:100%">
+		
+  <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+  <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
+	</div>    
+	 <br>
 
  
 
 	  
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-	   <script src="../dist/js/swiper.min.js"></script>
+	 
     <script>
-	    var swiper = new Swiper('.swiper-container', {
-      spaceBetween: 30,
-      centeredSlides: true,
-      autoplay: {
-        delay: 2500,
-        disableOnInteraction: false,
-      },
-      pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-      },
-      navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-      },
-    });
+	    var slideIndex = 0;
+carousel();
+function carousel() {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    for (i = 0; i < x.length; i++) {
+      x[i].style.display = "none"; 
+    }
+    slideIndex++;
+    if (slideIndex > x.length) {slideIndex = 1} 
+    x[slideIndex-1].style.display = "block"; 
+    setTimeout(carousel, 4000); // Change image every 2 seconds
+}
 	    
 	    
 	    
-
 	
-
 	    
       var main = function() {
   /* Push the body and the nav over */
@@ -213,27 +162,21 @@ body {
     $('.menu').animate({
       left: "0px"
     }, 400);
-
     $('body').animate({
       left: "12.5%"
     }, 400);
   });
-
   /* Then push them back */
   $('.icon-close').click(function() {
     $('.menu').animate({
       left: "-25%"
     }, 400);
-
     $('body').animate({
       left: "0px"
     }, 400);
   });
 };
-
-
 $(document).ready(main);
-
     </script>
   </body>
 </html>
