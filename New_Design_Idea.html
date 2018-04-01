@@ -103,28 +103,34 @@ body {
         Menu
       </div>
  
-<!-- Start CSS Slideshow BODY section -->
-<div id="wowslider-container1">
-<div class="ws_images"><ul>
-		<li><img src="data1/images/hongkong1081704.jpg" alt="Hong Kong" title="Hong Kong" id="wows1_0"/></li>
-		<li><img src="data1/images/london830775.jpg" alt="London" title="London" id="wows1_1"/></li>
-		<li><img src="data1/images/new_york.jpg" alt="New York" title="New York" id="wows1_2"/></li>
-		<li><img src="data1/images/shanghai.jpg" alt="Shanghai" title="Shanghai" id="wows1_3"/></li>
-	</ul></div>
-	<div class="ws_bullets"><div>
-		<a href="#" title="Hong Kong"><span><img src="data1/tooltips/hongkong1081704.jpg" alt="Hong Kong"/>1</span></a>
-		<a href="#" title="London"><span><img src="data1/tooltips/london830775.jpg" alt="London"/>2</span></a>
-		<a href="#" title="New York"><span><img src="data1/tooltips/new_york.jpg" alt="New York"/>3</span></a>
-		<a href="#" title="Shanghai"><span><img src="data1/tooltips/shanghai.jpg" alt="Shanghai"/>4</span></a>
-	</div></div>
-<div class="ws_shadow"></div>
-</div>	
-<script type="text/javascript" src="engine1/wowslider.js"></script>
-<script type="text/javascript" src="engine1/script.js"></script>
-<!-- End CSS Slider BODY section -->
+<img class="mySlides" src="img_fjords.jpg">
+<img class="mySlides" src="img_lights.jpg">
+<img class="mySlides" src="img_mountains.jpg">
+<img class="mySlides" src="img_forest.jpg">
+<button class="w3-button w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+<button class="w3-button w3-display-right" onclick="plusDivs(+1)">&#10095;</button>
 	  
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script>
+	  var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+    showDivs(slideIndex += n);
+}
+
+function showDivs(n) {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    if (n > x.length) {slideIndex = 1} 
+    if (n < 1) {slideIndex = x.length} ;
+    for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none"; 
+    }
+    x[slideIndex-1].style.display = "block"; 
+}
+	    
+	    
       var main = function() {
   /* Push the body and the nav over */
   $('.icon-menu').click(function() {
