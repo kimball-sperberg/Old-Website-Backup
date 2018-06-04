@@ -177,14 +177,15 @@ function carousel() {
 	
 	    
       var main = function() {
-$( document ).ready(function() {
+   /* Push the body on page load */	   
+   $( document ).ready(function() {
     console.log( "ready!" );
 	$('.menu').animate({
       left: "0px"
     }, 400);
     $('body').animate({
       left: "16%"
-    }, 400);
+    }, 1200);
   });
   /* Push the body and the nav over */
   $('.icon-menu').click(function() {
