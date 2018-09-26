@@ -1,0 +1,178 @@
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400;300' rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/css?family=PT+Serif" rel="stylesheet">
+    <link href='style.css' rel='stylesheet'>
+  </head>
+
+  <body class="index">
+    <section id="menuIndex">
+      <div class="text-center">
+    <h2>
+      <a href="#MusicSection">Listen</a> &#160;
+      <a href="#About">About</a> &#160;
+      <a href="index.html"><img src="img/SivacTextWhite3.png"></a>
+      <a href="imgGallery2.html">Artists</a> &#160;
+      <a href="Sivac1.html">Store</a>
+    </h2>
+  </div>
+  </section>
+    <section id="Section-1">
+      <div class="spread">
+      <div id="background"></div>
+
+        <div class="row top-row text-center">
+          <div class="col-12">
+            <h2>
+              <!--<a href="#MusicSection">Listen</a> &#160;
+              <a href="imgGallery.html">About</a> &#160;-->
+              <a href="index.html"><img id="imgHeader" src="img/SivacTextWhite3.png"></a>
+              <!--<a href="imgGallery.html">Artists</a> &#160;
+              <a href="Sivac1.html">Store</a>-->
+            </h2>
+            <h2>
+              <a href="#MusicSection">Listen</a>
+              <a href="#About">About</a>
+              <a href="imgGallery2.html">Artists</a>
+              <a href="Sivac1.html">Store</a>
+            </h2>
+
+        </div>
+      </div>
+    </div>
+    </section>
+
+
+    <section id="MusicSection">
+
+        <h3 class="title">Music</h2>
+
+            <div class="row midsection">
+        <div class="embed">
+          <iframe style="border: 10; width: 350px; height: 350px;" src="https://bandcamp.com/EmbeddedPlayer/album=3977585361/size=large/bgcol=333333/linkcol=e99708/minimal=true/transparent=true/" seamless><a href="http://johnehlis.bandcamp.com/album/in-this-lifetime">In This Lifetime by John Ehlis</a></iframe>
+        </div>
+        <div class="embed">
+          <iframe style="border: 10; width: 350px; height: 350px;" src="https://bandcamp.com/EmbeddedPlayer/album=3677284961/size=large/bgcol=333333/linkcol=e99708/minimal=true/transparent=true/" seamless><a href="http://johnehlis.bandcamp.com/album/along-the-way">Along the Way by John Ehlis</a></iframe>      </div>
+      <div class="embed">
+        <iframe style="border: 10; width: 350px; height: 350px;" src="https://bandcamp.com/EmbeddedPlayer/album=2869782932/size=large/bgcol=333333/linkcol=e99708/minimal=true/transparent=true/" seamless><a href="http://johnehlis.bandcamp.com/album/san-carlos">San Carlos by John Ehlis</a></iframe>      </div>
+  </div>
+
+    <div class="row midsection">
+      <div class="titles text-center">
+        <h3>In This Lifetime (2015)</h3>
+      </div>
+      <div class="titles">
+<h3>Along the Way (2012)</h3>
+    </div>
+    <div class="titles">
+<h3>San Carlos (2002)</h3>
+    </div>
+  </div>
+
+      <div class="row midsection">
+        <div class="col-7"></div>
+        <div class="col-4">        <a href="https://toe-music.bandcamp.com/album/new-sentimentality"><p>>>More Releases</p></a></div>
+
+        <div class="col-1"></div>
+      </div>
+
+        <div id="About" class="about">
+          <h3>About</h3>
+        </div>
+
+        <div class="row text-center quote">
+
+          <div class="col-2">
+          </div>
+
+          <div class="col-8">
+            <h4>When an artist goes beyond what they already know they can do, now that to me is exciting, it’s unpredictable, it’s of the moment, and it’s never quite the same twice.
+              <br><br>
+              When artists of this nature gather together great moments can happen.
+              <br><br>
+              These recordings attempt to capture these moments.  The music unfolds on its own, following its own path.  It is a journey.  There is a life force to it, an energy, something that as unique and distinctive as each of us.
+              <br><br>
+              It is exhilarating, this exchange of energy.  It is music with its own identity.
+              <br><br>
+              Guitarist and composer <a href="johnehlis.com">John Ehlis</a> embraces this vision with each of these recordings released on Sívac Records.
+            </h4>
+          </div>
+
+                    <div class="col-2">
+                    </div>
+
+
+
+      </div> <!--pairs with spread-->
+
+      <footer>
+  <p>© 2018 John Ehlis</p>
+      </footer>
+
+    </section>
+  <script src="http://code.jquery.com/jquery-latest.js"></script>
+</body>
+<!--Reveals navigation on scroll-->
+<script type="text/javascript">
+  (function($) {
+      $(document).ready(function(){
+          $(window).scroll(function(){
+              if ($(this).scrollTop() > 135) {
+                  $('#menuIndex').fadeIn(500);
+              } else {
+                  $('#menuIndex').fadeOut(250);
+              }
+          });
+      });
+  })(jQuery);
+
+
+  var background = document.querySelector("#background");
+
+    function setTranslate(xPos, yPos, el) {
+        el.style.transform = "translate3d(" + xPos + ", " + yPos + "px, 0)";
+    }
+
+    window.addEventListener("DOMContentLoaded", scrollLoop, false);
+
+    var xScrollPosition;
+    var yScrollPosition;
+
+    function scrollLoop() {
+        xScrollPosition = window.scrollX;
+        yScrollPosition = window.scrollY;
+
+        setTranslate(0, yScrollPosition * -0.3, background);
+
+        requestAnimationFrame(scrollLoop);
+    }
+
+    //Smooth scroll on all links
+        $(document).ready(function(){
+          // Add smooth scrolling to all links
+          $("a").on('click', function(event) {
+
+            // Make sure this.hash has a value before overriding default behavior
+            if (this.hash !== "") {
+              // Prevent default anchor click behavior
+              event.preventDefault();
+
+              // Store hash
+              var hash = this.hash;
+
+              // Using jQuery's animate() method to add smooth page scroll
+              // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+              $('html, body').animate({
+                scrollTop: $(hash).offset().top
+              }, 800, function(){
+
+                // Add hash (#) to URL when done scrolling (default click behavior)
+                window.location.hash = hash;
+              });
+            } // End if
+          });
+        });
+</script>
+</html>
