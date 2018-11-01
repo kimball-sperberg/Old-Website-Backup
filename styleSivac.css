@@ -1,0 +1,438 @@
+/* Initial body */
+body {
+  overflow-x: hidden;
+  margin: 0;
+}
+#menuIndex {
+  padding-top: 15px;
+	position:fixed;
+	top:0px;
+	width:100%;
+  background: rgba(0, 0, 0, 1); /*Was 0, 0, 0, 0.6 before for background opacity*/
+	z-index:9998;
+	display: none;
+}
+
+#menu {
+  padding-top: 15px;
+	position:fixed;
+	top:0px;
+	width:100%;
+  background: rgba(0, 0, 0, 0.6);
+	z-index:9998;
+	display: none;
+}
+
+#menu a {
+  color: black;
+}
+
+/* Basic styling */
+.top-row {
+  padding: 50px;
+}
+.embed {
+  display: block;
+  margin: auto;
+  padding-top: 40px;
+}
+.embed1 {
+  display: block;
+  margin: auto;
+  padding-top: 40px;
+  padding-left: 40px;
+  padding-right: 0px;
+}
+
+.image-scroll {
+  width:100%;
+}
+
+#bootstrap-override h2 a{
+  color: white;
+  margin-left: 30px;
+  margin-right: 30px;
+}
+
+#bootstrap-override h2 {
+  color: white;
+  font-size: 17pt;
+  font-family: 'PT Serif', serif;
+  margin-left: 30px;
+  margin-right: 30px;
+}
+
+#menu h2 a {
+  color: white;
+}
+
+.gallery h2 a {
+  margin-left: 30px;
+  margin-right: 30px;
+}
+
+.gallery h2 {
+  text-decoration: none;
+  font-size: 17pt;
+  font-family: 'PT Serif', serif;
+  margin-left: 30px;
+  margin-right: 30px;
+}
+
+.gallery .black {
+  color: black;
+}
+
+
+a:hover {
+  text-decoration: none;
+  color: orange;
+}
+
+.midsection {
+  /*background-color: #312B0D;
+  background-color: #63441D;
+  background-color: #301303;
+  background-color: #260f02;
+  background-color: black;*/
+
+
+  /*  width: 100%!important; */
+}
+
+/* As far as I can tell this has no purpose. Not sure why I added it in the first place.*/
+/*.midsection img {
+  width:80%;
+}*/
+
+
+
+ul {
+  list-style-type: none;
+}
+
+li {
+  font-size: 18;
+}
+
+#background {
+     background-image: url("img/Ehlis-Guitar8.jpg");
+     z-index: 0;
+     min-height: 750px;
+     background-attachment: fixed;
+     background-position: left;
+     background-repeat: no-repeat;
+     background-size: cover;
+     position: fixed;
+     top: 0;
+     width: 100vw;
+     height: 100vw;
+     z-index: -1;
+ }
+
+ #bg2 {
+      background-image: url("img/IMG_9181.jpg");
+      min-height: 750px;
+      background-attachment: fixed;
+      background-position: left;
+      background-repeat: no-repeat;
+      background-size: cover;
+      position: fixed;
+      top: 0;
+      width: 100vw;
+      height: 100vw;
+      z-index: -2;
+  }
+
+#imgHeader {
+   height:75px;
+ }
+
+ .spread {
+     /* The image used
+     min-height: 750px;*/
+     height: 100vh;
+     /* Set a specific height */
+     /* Create the parallax scrolling effect */
+     background-attachment: fixed;
+     background-position: left;
+     background-repeat: no-repeat;
+     background-size: cover;
+ }
+
+ .spread2 {
+     /* The image used
+     min-height: 750px;*/
+
+     /* Set a specific height */
+     /* Create the parallax scrolling effect */
+     background-attachment: fixed;
+     background-position: left;
+     background-repeat: no-repeat;
+     background-size: cover;
+
+ }
+
+.about img {
+  height: 100%;
+}
+
+.about2 img {
+  height: 100%;
+}
+
+.about {
+  background: url("img/Mandolin2.jpg") no-repeat center center fixed;
+  background-size: cover;
+  color: white;
+  text-align: center;
+}
+
+.about2 {
+  background: url("img/IMG_9181.jpg") no-repeat center center fixed;
+  background-size: cover;
+  color: white;
+  text-align: center;
+}
+
+.quote {
+  background-color: white;
+  /*background: url("img/IMG_9181.jpg") no-repeat center center fixed;
+  background-size: cover;*/
+  color: black;
+  padding-top: 100px;
+  padding-left: 100px;
+  padding-right: 100px;
+  padding-bottom: 100px;
+  font-family: 'PT Serif', serif;
+  font-size: 24pt;
+  text-align: justify;
+}
+
+.quote a {
+  text-decoration: none;
+  color: black;
+}
+.white {
+  background-color: white;
+}
+footer {
+  height:40px;
+  background-color: black;
+  width: 100%;
+
+}
+
+footer p {
+  text-align: center;
+  color: white;
+}
+
+.meet {
+  min-height: 500px;
+  background-image: url(img/Ehlis-Wall-BW.jpg);
+  width: 100%;
+}
+
+h3 {
+  text-align: center;
+  font-size: 42pt;
+  margin-top: 10px;
+}
+
+#MusicSection {
+  background-color: black;
+}
+
+.sectionTitle {
+  font-weight: bold;
+  padding-top: 60px;
+  padding-bottom: 30px;
+}
+
+#bootstrap-override hr {
+  color: gold;
+  border-color: orange;
+  width: 10%;
+  /*margin-top: 50px;
+  margin-bottom: 50px;*/
+  padding-bottom: 30px;
+}
+
+#bootstrap-override h2 a:hover {
+  color: orange;
+}
+
+.Container40px {
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+.Container120px {
+  padding-left: 120px;
+  padding-right: 120px;
+}
+
+.ImgGallery {
+  padding-top: 50px;
+
+}
+
+.embedleft {
+  padding-left: 120px;
+  padding-right: 60px;
+}
+
+.embedright {
+  padding-right: 120px;
+  padding-left: 60px;
+}
+
+.rightoh {
+  padding-right: 120px;
+}
+
+.leftoh {
+  padding-left: 120px;
+}
+
+.albumTitle {
+  font-size: 24pt;
+  color: white;
+  margin-top: 10px;
+  margin-bottom: 40px;
+}
+
+.blackText {
+  color: black;
+}
+
+.whiteText {
+  color: white;
+}
+
+
+
+
+
+/*modal*/
+body {font-family: Arial, Helvetica, sans-serif;}
+
+#myImg, #myImg2, #myImg3, #myImg4, #myImg5, #myImg6 {
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+
+#myImg:hover {opacity: 0.7; cursor: pointer;}
+#myImg2:hover {opacity: 0.7; cursor: pointer;}
+#myImg3:hover {opacity: 0.7; cursor: pointer;}
+#myImg4:hover {opacity: 0.7; cursor: pointer;}
+#myImg5:hover {opacity: 0.7; cursor: pointer;}
+#myImg6:hover {opacity: 0.7; cursor: pointer;}
+#myImg7:hover {opacity: 0.7; cursor: pointer;}
+#myImg8:hover {opacity: 0.7; cursor: pointer;}
+#myImg9:hover {opacity: 0.7; cursor: pointer;}
+#myImg10:hover {opacity: 0.7; cursor: pointer;}
+#myImg11:hover {opacity: 0.7; cursor: pointer;}
+#myImg12:hover {opacity: 0.7; cursor: pointer;}
+#myImg13:hover {opacity: 0.7; cursor: pointer;}
+#myImg14:hover {opacity: 0.7; cursor: pointer;}
+#myImg15:hover {opacity: 0.7; cursor: pointer;}
+#myImg16:hover {opacity: 0.7; cursor: pointer;}
+#myImg17:hover {opacity: 0.7; cursor: pointer;}
+#myImg18:hover {opacity: 0.7; cursor: pointer;}
+#myImg19:hover {opacity: 0.7; cursor: pointer;}
+#myImg20:hover {opacity: 0.7; cursor: pointer;}
+#myImg21:hover {opacity: 0.7; cursor: pointer;}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+
+/* Modal Content (image) */
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+}
+
+/* Caption of Modal Image */
+#caption {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+  text-align: center;
+  color: #ccc;
+  padding: 10px 0;
+  height: 150px;
+}
+
+/* Add Animation */
+.modal-content, #caption {
+  -webkit-animation-name: zoom;
+  -webkit-animation-duration: 0.6s;
+  animation-name: zoom;
+  animation-duration: 0.6s;
+}
+
+@-webkit-keyframes zoom {
+  from {-webkit-transform:scale(0)}
+  to {-webkit-transform:scale(1)}
+}
+
+@keyframes zoom {
+  from {transform:scale(0)}
+  to {transform:scale(1)}
+}
+
+/* The Close Button */
+.close {
+  position: absolute;
+  top: 60px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+  z-index: 9999;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+h5 {
+  padding-top: 40px;
+  font-size: 40px;
+}
+
+.reviewText {
+  margin-left: 40px;
+  font-size: 25px;
+  text-align: left;
+}
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px){
+  .modal-content {
+      width: 100%;
+  }
+}
