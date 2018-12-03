@@ -232,7 +232,11 @@ p {
     }
   }
 
-.row:before, row:after {
+.row:before {
+   display: inline-block;
+}
+
+.row:after {
    display: inline-block;
 }
 
