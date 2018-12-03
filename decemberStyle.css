@@ -7,16 +7,16 @@ body {
 }
 
 #bootstrap-override h1 {
-  color: white
+  color: white;
 }
 
 #bootstrap-override h2 {
   margin-top: 0px;
-  color: white
+  color: white;
 }
 
 #bootstrap-override h3 {
-  color: white
+  color: white;
 }
 
 h2 a {
@@ -217,7 +217,7 @@ p {
   padding-left: 0px !important;
 }
 .row {
-  padding-top: 2.5%
+  padding-top: 2.5%;
 }
 
 @media (min-width:720px) {
