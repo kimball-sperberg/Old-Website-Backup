@@ -2,26 +2,15 @@ body {
   overflow-x: hidden;
   /*font-family: 'Merriweather Sans', sans-serif;*/
   font-family: 'Share' !important;
-  color: white;
-  background-color: #DBB9B8;
+  font-size: 12pt;
 }
 
-#bootstrap-override h1 {
-  color: white;
-}
+
 
 #bootstrap-override h2 {
   margin-top: 0px;
-  color: white;
 }
 
-#bootstrap-override h3 {
-  color: white;
-}
-
-h2 a {
-    color: white;
-}
 #name{
   font-size: 80px;
   padding-left: 5%;
@@ -62,23 +51,19 @@ h2 a {
 }
 
 #Landing {
-  /*background-image: url("Images/Glitch_Landscape_Gif-2.gif");*/
   max-height: 100%;
-
   background-size: cover;
-
+  height: 100vh;
 }
 
 #scrollMenu {
 	position:fixed;
 	top:0px;
 	width:100%;
-  background: #DBB9B8;/*rgba(0, 0, 0, 0.6);*/
 	z-index:9999;
 	display: none;
   text-decoration: none;
-  color: white;
-  background-color: #DBB9B8;
+  background-color: white;
 }
 
 #scrollMenu a {
@@ -102,7 +87,7 @@ h2 a {
 .rightAlign a {
   margin-left: 5%;
   text-decoration: none;
-  color: white;
+  color: black;
 }
 
 .thumbnail {
@@ -113,13 +98,6 @@ h2 a {
 
 a:hover {
   color: purple;
-}
-
-#Landing {
-  background-color: #DBB9B8;
-  /*background-image: url("Images/StreetPole6.png");*/
-  /*background-image: url("Images/Glitch_Landscape-2-cropped.png");*/
-  height: 100vh;
 }
 
 .aboutMe {
@@ -153,22 +131,26 @@ p {
 .customContainer {
   margin-left: 3%;
   margin-right: 3%;
-  margin-top: 3%;
 }
 
 @media screen and (min-width:768px) {
   .customContainer {
-    margin-left: 8.3%;
-    margin-right: 8.3%;
-    margin-top: 37px;
+    margin-left: 5%;
+    margin-right: 5%;
     }
   }
 
 @media screen and (min-width:992px) {
   .customContainer {
-    margin-left: 16%;
-    margin-right: 16%;
-    margin-top: 37px;
+    margin-left: 9%;
+    margin-right: 9%;
+    }
+  }
+
+@media screen and (min-width:1200px) {
+  .customContainer {
+    margin-left: 14%;
+    margin-right: 14%;
     }
   }
 
@@ -189,7 +171,7 @@ p {
   padding-right: 2.5%;
 }
 
-@media (min-width:720px) {
+@media (min-width:768px) {
   .left-half-col {
       padding-right: 5%;
     }
@@ -199,7 +181,7 @@ p {
   padding-left: 2.5%;
 }
 
-@media (min-width:720px) {
+@media (min-width:768px) {
   .right-half-col {
       padding-left: 5%;
     }
@@ -211,35 +193,21 @@ p {
   margin-left: 0px !important;
 }
 
-
 .container-fluid {
   padding-right: 0px !important;
   padding-left: 0px !important;
 }
-.row {
-  padding-top: 2.5%;
-}
 
-@media (min-width:720px) {
-  .row {
-      padding-top: 5%;
-    }
-  }
 
-@media screen and (min-width:992px) {
-  .row {
-    padding-top: 5%;
-    }
-  }
 
+/*These lines fix a bug on iOS where bootstrap rows will display as 'table'*/
 .row:before {
-   display: inline-block !important;
-}
+    display: inline-block;
+  }
 
 .row:after {
-   display: inline-block !important;
+  display: inline-block;
 }
-
 
 /*jssor slider loading skin spin css*/
 .jssorl-009-spin img {
@@ -255,18 +223,18 @@ p {
 }
 
 /*jssor slider bullet skin 051 css*/
-.jssorb051 .i {position:absolute;cursor:pointer;}
-.jssorb051 .i .b {fill:#fff;fill-opacity:0.5;}
-.jssorb051 .i:hover .b {fill-opacity:.7;}
-.jssorb051 .iav .b {fill-opacity: 1;}
-.jssorb051 .i.idn {opacity:.3;}
+  .jssorb051 .i {position:absolute;cursor:pointer;}
+  .jssorb051 .i .b {fill:#fff;fill-opacity:0.5;}
+  .jssorb051 .i:hover .b {fill-opacity:.7;}
+  .jssorb051 .iav .b {fill-opacity: 1;}
+  .jssorb051 .i.idn {opacity:.3;}
 
 /*jssor slider arrow skin 051 css*/
-.jssora051 {display:block;position:absolute;cursor:pointer;}
-.jssora051 .a {fill:none;stroke:#fff;stroke-width:360;stroke-miterlimit:10;}
-.jssora051:hover {opacity:.8;}
-.jssora051.jssora051dn {opacity:.5;}
-.jssora051.jssora051ds {opacity:.3;pointer-events:none;}
+  .jssora051 {display:block;position:absolute;cursor:pointer;}
+  .jssora051 .a {fill:none;stroke:#fff;stroke-width:360;stroke-miterlimit:10;}
+  .jssora051:hover {opacity:.8;}
+  .jssora051.jssora051dn {opacity:.5;}
+  .jssora051.jssora051ds {opacity:.3;pointer-events:none;}
 
 #bootstrap-override .col-xs-6 {
 padding-left: 0 !important;
@@ -283,6 +251,15 @@ padding-right: 0 !important;
     }
   }
 
+#bootstrap-override .txt {
+  padding-top: 1.25%;
+}
+
+@media (min-width:768px) {
+  #bootstrap-override .txt {
+      padding-top: 2.5%;
+    }
+  }
 
 @media
 only screen and (-webkit-min-device-pixel-ratio: 1.5),
@@ -298,24 +275,57 @@ only screen and (min-device-pixel-ratio: 1.5){
 
 }
 
-.sectionTitle {
-  size: 24pt;
+#bootstrap-override .sectionTitle h2 {
+  font-size: 250%;
+  padding-top: 1%;
 }
 
 @media (min-width:768px) {
-  .sectionTitle {
-      size: 36pt;
+  #bootstrap-override .sectionTitle h2 {
+      font-size: 360%;
+      padding-top: 1.5%;
     }
   }
 
 @media (min-width:992px) {
-  .sectionTitle {
-      size: 42pt;
+  #bootstrap-override .sectionTitle h2 {
+      font-size: 420%;
+      padding-top: 2%;
     }
   }
 
 @media (min-width:1200px) {
-  .sectionTitle {
-      size: 48pt;
+  #bootstrap-override .sectionTitle h2 {
+      font-size: 450%;
+      padding-top: 2.5%;
     }
   }
+
+#bootstrap-override p {
+  font-size: 120%;
+}
+
+@media (min-width:768px) {
+  #bootstrap-override p {
+      font-size: 145%;
+    }
+  }
+
+@media (min-width:992px) {
+  #bootstrap-override p {
+      font-size: 170%;
+    }
+  }
+
+@media (min-width:1200px) {
+  #bootstrap-override p {
+      font-size: 195%;
+    }
+  }
+
+hr {
+  color: black;
+  width: 15%;
+  margin-top: 0px !important;
+  margin-bottom: 0px !important;
+}
