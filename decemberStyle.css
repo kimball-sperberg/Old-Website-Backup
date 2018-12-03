@@ -297,3 +297,25 @@ only screen and (min-device-pixel-ratio: 1.5){
   }
 
 }
+
+.sectionTitle {
+  size: 24pt;
+}
+
+@media (min-width:768px) {
+  .sectionTitle {
+      size: 36pt;
+    }
+  }
+
+@media (min-width:992px) {
+  .sectionTitle {
+      size: 42pt;
+    }
+  }
+
+@media (min-width:1200px) {
+  .sectionTitle {
+      size: 48pt;
+    }
+  }
