@@ -14,15 +14,6 @@ body {
   margin-top: 0px;
   color: white
 }
-/*
-@media (min-width:500px) {
-  #location {
-    font-size: 53px;
-    padding-left: 10%;
-    line-height: 1.8em;
-  }
-}
-*/
 
 #bootstrap-override h3 {
   color: white
@@ -160,24 +151,24 @@ p {
 }
 
 .customContainer {
-  padding-left: 6%;
-  padding-right: 6%;
-  padding-top: 6%;
+  margin-left: 3%;
+  margin-right: 3%;
+  margin-top: 3%;
 }
 
 @media screen and (min-width:768px) {
   .customContainer {
-    padding-left: 8.3%;
-    padding-right: 8.3%;
-    padding-top: 37px;
+    margin-left: 8.3%;
+    margin-right: 8.3%;
+    margin-top: 37px;
     }
   }
 
 @media screen and (min-width:992px) {
   .customContainer {
-    padding-left: 16%;
-    padding-right: 16%;
-    padding-top: 37px;
+    margin-left: 16%;
+    margin-right: 16%;
+    margin-top: 37px;
     }
   }
 
@@ -213,6 +204,12 @@ p {
       padding-left: 5%;
     }
   }
+
+/*This line counteracts bootstrap's code which gives rows a margin of -15 on either side */
+.row {
+  margin-right: 0px !important;
+  margin-left: 0px !important;
+}
 
 .row {
   padding-top: 2.5%
@@ -261,4 +258,8 @@ p {
 #bootstrap-override .col-xs-6 {
 padding-left: 0 !important;
 padding-right: 0 !important;
+}
+
+#bootstrap-override .img {
+  padding-top: 2.5%;
 }
