@@ -233,7 +233,7 @@ p {
   }
 
 .row:before, row:after {
-   display: inline-block
+   display: inline-block;
 }
 
 
@@ -272,6 +272,13 @@ padding-right: 0 !important;
 #bootstrap-override .img {
   padding-top: 2.5%;
 }
+
+@media (min-width:768px) {
+  #bootstrap-override .img {
+      padding-top: 5%;
+    }
+  }
+
 
 @media
 only screen and (-webkit-min-device-pixel-ratio: 1.5),
