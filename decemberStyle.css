@@ -211,6 +211,11 @@ p {
   margin-left: 0px !important;
 }
 
+
+.container-fluid {
+  padding-right: 0px !important;
+  padding-left: 0px !important;
+}
 .row {
   padding-top: 2.5%
 }
@@ -226,6 +231,10 @@ p {
     padding-top: 5%;
     }
   }
+
+.row:before, row:after {
+   display: inline-block
+}
 
 
 /*jssor slider loading skin spin css*/
