@@ -202,11 +202,11 @@ p {
 
 /*These lines fix a bug on iOS where bootstrap rows will display as 'table'*/
 .row:before {
-    display: inline-block;
+    display: inline-block !important;
   }
 
 .row:after {
-  display: inline-block;
+  display: inline-block !important;
 }
 
 /*jssor slider loading skin spin css*/
