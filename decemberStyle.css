@@ -233,11 +233,11 @@ p {
   }
 
 .row:before {
-   display: inline-block;
+   display: inline-block !important;
 }
 
 .row:after {
-   display: inline-block;
+   display: inline-block !important;
 }
 
 
