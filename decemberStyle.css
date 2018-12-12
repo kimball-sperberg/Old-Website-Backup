@@ -25,7 +25,7 @@ body {
 
 #headerText {
   font-size: 280%; /*This line will get overwritten but is a fallback for older browsers that don't use vw*/
-  font-size: 13.75vw;
+  font-size: 13.5vw;
   color: black;
   margin-bottom: 0;
   padding-top: 3%;
@@ -34,7 +34,7 @@ body {
 
 #headerTextSecondary {
   font-size: 190%; /*Fallback for older browsers*/
-  font-size: 9.5vw;
+  font-size: 9.25vw;
   color: black;
   margin-bottom: 0;
   line-height: 0.9;
