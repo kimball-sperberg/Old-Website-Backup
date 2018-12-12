@@ -152,6 +152,10 @@ h1 {
   font-size: 180%;
 }
 
+.windowTitle {
+  padding-left: 10px;
+}
+
 .justify {
   display: flex;
   justify-content: center;
