@@ -25,16 +25,16 @@ body {
 
 #headerText {
   font-size: 280%; /*This line will get overwritten but is a fallback for older browsers that don't use vw*/
-  font-size: 11.75vw;
+  font-size: 11.5vw;
   color: black;
   margin-bottom: 0;
-  padding-top: 12%;
+  padding-top: 6%;
   line-height: 0.9;
 }
 
 #headerTextSecondary {
   font-size: 190%; /*Fallback for older browsers*/
-  font-size: 8vw;
+  font-size: 7.75vw;
   color: black;
   margin-bottom: 0;
   line-height: 0.9;
