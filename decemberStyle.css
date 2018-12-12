@@ -2,8 +2,8 @@
   font-family: 'VCR OSD Mono';
   src: url('VCR_OSD_MONO_1.001.ttf');
 }
+
 body {
-  overflow-x: hidden;
   /*font-family: 'Merriweather Sans', sans-serif;*/
   font-family: 'VCR OSD Mono';
   font-size: 12pt;
@@ -16,46 +16,140 @@ body {
   height: 100vh;
   background-color: #FFCAAA;
   z-index: -100;
-  overflow: hidden;
+}
+
+.landingContainer {
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
 #headerText {
-  font-size: 280%;
+  font-size: 280%; /*This line will get overwritten but is a fallback for older browsers that don't use vw*/
+  font-size: 14vw;
+  color: black;
+  margin-bottom: 0;
+  padding-top: 3%;
+  line-height: 0.9;
+}
+
+#headerTextSecondary {
+  font-size: 190%; /*Fallback for older browsers*/
+  font-size: 9.5vw;
+  color: black;
+  margin-bottom: 0;
+  line-height: 0.9;
 }
 
 #Reaper {
-  padding-top: 20%;
-  max-width: 80%;
-}
-
-@media (min-width: 992px) {
-  #Reaper {
-    padding-top: 7%;
-    max-height: 90vh;
-    max-width: 80%;
-  }
-}
-
-#gigPosters {
-  z-index: 2;
+  padding-top: 2%;
+  max-width: 100%;
+  width: 100%;
 }
 
 #downArrow {
-  padding-top: 12%;
-  max-width: 20%;
+  padding-top: 18%;
+  max-width: 25%;
   display:block;
-   margin:auto;
+  margin:auto;
+}
+
+@media (min-width: 576px) {
+  .landingContainer {
+    padding-left: 3%;
+    padding-right: 3%;
+  }
+  #headerText {
+    font-size: 280%; /*Fallback for older browsers*/
+    font-size: 12.5vw;
+    padding-top: 9%;
+  }
+  #headerTextSecondary {
+    font-size: 190%; /*Fallback for older browsers*/
+    font-size: 7vw;
+  }
+  #Reaper {
+    padding-top: 2%;
+    max-height: 90vh;
+  }
+}
+
+@media (min-width: 768px) {
+  .landingContainer {
+    padding-left: 6%;
+    padding-right: 6%;
+  }
+  #headerText {
+    font-size: 280%; /*Fallback for older browsers*/
+    font-size: 10vw;
+    padding-top: 6%;
+  }
+  #headerTextSecondary {
+    font-size: 190%; /*Fallback for older browsers*/
+    font-size: 7vw;
+  }
+  #Reaper {
+    padding-top: 2%;
+    max-width: 80%;
+  }
+  #downArrow {
+    padding-top: 18%;
+    max-width: 45%;
+  }
 }
 
 @media (min-width: 992px) {
+  .landingContainer {
+    padding-left: 3%;
+    padding-right: 3%;
+  }
+  #headerText {
+    font-size: 280%;
+    font-size: 3vw;
+    padding-top: 3%;
+  }
+  #headerTextSecondary {
+    font-size: 190%;
+    font-size: 2vw;
+  }
+  #Reaper {
+    padding-top: 2%;
+    max-height: 80vh;
+    max-width: 80%;
+  }
   #downArrow {
     padding-top: 12%;
     padding-bottom: 2%;
     max-width: 40%;
     bottom: 0;
     display:block;
-     margin:auto;
+    margin:auto;
   }
+}
+
+@media (min-width: 1200px) {
+  .landingContainer {
+    padding-left: 32%;
+    padding-right: 32%;
+  }
+  #headerText {
+    font-size: 140%;
+    font-size: 4.5vw;
+    padding-top: 8%;
+  }
+  #headerTextSecondary {
+    font-size: 190%;
+    font-size: 3.1vw;
+  }
+  #Reaper {
+    padding-top: 2%;
+    max-height: 90vh;
+    max-width: 80%;
+  }
+}
+
+h1 {
+  color: white;
+  font-size: 180%;
 }
 
 .justify {
@@ -68,6 +162,10 @@ body {
   padding-bottom: 10%;
 }
 
+#gigPosters {
+  z-index: 2;
+}
+
 #Portrait img {
   padding: 10px;
 }
@@ -76,12 +174,6 @@ body {
   text-align: right;
   float: right;
   height: 33px;
-}
-
-h1 {
-  color: white;
-  font-size: 180%;
-  padding-left: 10px;
 }
 
 .windowTop {
@@ -398,7 +490,7 @@ only screen and (min-device-pixel-ratio: 1.5){
   html,
   body{
     width:100%;
-    overflow-x:hidden;
+
   }
 
 }
