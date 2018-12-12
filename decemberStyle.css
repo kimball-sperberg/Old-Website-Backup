@@ -19,13 +19,13 @@ body {
 }
 
 .landingContainer {
-  padding-left: 5%;
-  padding-right: 5%;
+  padding-left: 6%;
+  padding-right: 6%;
 }
 
 #headerText {
   font-size: 280%; /*This line will get overwritten but is a fallback for older browsers that don't use vw*/
-  font-size: 14vw;
+  font-size: 13.75vw;
   color: black;
   margin-bottom: 0;
   padding-top: 3%;
