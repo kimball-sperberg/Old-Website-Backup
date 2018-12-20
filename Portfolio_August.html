@@ -144,8 +144,6 @@
     </h2>-->
     <!--<div class="d-none d-lg-block"><img src="Images/PaintIcon.png" style="padding-left: 20%; max-width: 25%; padding-top: 10%;float: left;"></div>-->
 
-	    <img src="Images/PaintIcon.png" id="firstTV" style="max-width: 100%;">
-
     <div class="landingContainer">
       <div class="row text-center">
 
@@ -153,7 +151,7 @@
           <div class="row">
 
             <div class="col-12 iconTop">
-              <img src="Images/PaintIcon.png" style="max-width: 100%;">
+              <img src="Images/PaintIcon.png" id="firstIcon" style="max-width: 100%;">
             </div>
 
             <div class="col-12 iconLeftMiddle">
@@ -326,7 +324,7 @@
 			var state = true;
 			var img = document.getElementById("Reaper");
 			var firstTV = document.getElementById("firstTV");
-			firstTV.onmouseover = function(){
+			firstIcon.onmouseover = function(){
 				var on = "Images/Reaper_Condensed.png";
 				var off = "Images/TVgif_2.gif";
 				if(state){
@@ -334,7 +332,7 @@
 			    state = false;
 			  }
 			}
-			firstTV.onmouseout = function(){
+			firstIcon.onmouseout = function(){
 				Reaper.src = on;
 				state = true;
 			}
