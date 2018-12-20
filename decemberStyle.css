@@ -19,22 +19,22 @@ body {
 }
 
 .landingContainer {
-  padding-left: 12%;
-  padding-right: 12%;
+  padding-left: 9%;
+  padding-right: 9%;
 }
 
 #headerText {
   font-size: 280%; /*This line will get overwritten but is a fallback for older browsers that don't use vw*/
-  font-size: 11.5vw;
+  font-size: 12.5vw;
   color: black;
   margin-bottom: 0;
-  padding-top: 6%;
+  padding-top: 3%;
   line-height: 0.9;
 }
 
 #headerTextSecondary {
   font-size: 190%; /*Fallback for older browsers*/
-  font-size: 7.75vw;
+  font-size: 8.5vw;
   color: black;
   margin-bottom: 0;
   line-height: 0.9;
@@ -47,7 +47,7 @@ body {
 }
 
 #downArrow {
-  padding-top: 15%;
+  padding-top: 18%;
   max-width: 25%;
   display:block;
   margin:auto;
@@ -55,8 +55,8 @@ body {
 
 @media (min-width: 576px) {
   .landingContainer {
-    padding-left: 6%;
-    padding-right: 6%;
+    padding-left: 3%;
+    padding-right: 3%;
   }
   #headerText {
     font-size: 280%; /*Fallback for older browsers*/
@@ -128,8 +128,8 @@ body {
 
 @media (min-width: 1200px) {
   .landingContainer {
-    padding-left: 32%;
-    padding-right: 32%;
+    padding-left: 22%;
+    padding-right: 22%;
   }
   #headerText {
     font-size: 140%;
@@ -147,6 +147,24 @@ body {
   }
 }
 
+.iconTop {
+  padding-top: 150%;
+}
+
+.iconRightMiddle {
+  padding-top: 80%;
+  margin-left: 60%;
+}
+
+.iconLeftMiddle {
+  padding-top: 80%;
+  margin-left: -60%;
+}
+
+.iconBottom {
+  padding-top: 80%;
+}
+
 h1 {
   color: white;
   font-size: 180%;
@@ -162,7 +180,6 @@ h1 {
 }
 
 #artistStatement {
-  padding-top: 10%;
   padding-bottom: 10%;
 }
 
