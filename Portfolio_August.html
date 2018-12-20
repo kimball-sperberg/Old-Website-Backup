@@ -324,18 +324,18 @@
 			var on = "Images/Reaper_Condensed.png";
 			var off = "Images/TVgif_2.gif";
 			var state = true;
-			var img = document.getElementById("img");
+			var img = document.getElementById("Reaper");
 			var firstTV = document.getElementById("firstTV");
 			firstTV.onmouseover = function(){
 				var on = "Images/Reaper_Condensed.png";
 				var off = "Images/TVgif_2.gif";
 				if(state){
-			  	img.src = off;
+			  	Reaper.src = off;
 			    state = false;
 			  }
 			}
 			firstTV.onmouseout = function(){
-				img.src = on;
+				Reaper.src = on;
 				state = true;
 			}
 			secondTV.onmouseover = function(){
