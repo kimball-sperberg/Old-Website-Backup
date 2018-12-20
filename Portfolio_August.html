@@ -155,7 +155,7 @@
             </div>
 
             <div class="col-12 iconLeftMiddle">
-              <img src="Images/CompIcon.png" style="max-width: 100%;">
+              <img src="Images/CompIcon.png" id="secondIcon" style="max-width: 100%;">
             </div>
 
             <div class="col-12 iconBottom">
@@ -336,15 +336,15 @@
 				Reaper.src = on;
 				state = true;
 			}
-			secondTV.onmouseover = function(){
+			secondIcon.onmouseover = function(){
 				var on = "Images/Reaper_Condensed.png";
 				var off = "Images/TVgif_6.gif";
 				if(state){
-			  	img.src = off;
+			  	Reaper.src = off;
 			    state = false;
 			  }
 			}
-			secondTV.onmouseout = function(){
+			secondIcon.onmouseout = function(){
 				img.src = on;
 				state = true;
 			}
