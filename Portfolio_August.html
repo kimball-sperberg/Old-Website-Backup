@@ -123,6 +123,7 @@
     </script>
     <script src="http://code.jquery.com/jquery-latest.js"></script>
     <script type="text/javascript">jssor_1_slider_init();</script>
+    
 </head>
 <body id="bootstrap-override">
 
@@ -151,7 +152,7 @@
           <div class="row">
 
             <div class="col-12 iconTop">
-              <img src="Images/PaintIcon.png" style="max-width: 100%;">
+              <img src="Images/PaintIcon.png" id="firstTV" style="max-width: 100%;">
             </div>
 
             <div class="col-12 iconLeftMiddle">
@@ -318,7 +319,61 @@
 </section>
 
 
-
+<script>
+			var on = "Images/Reaper_Condensed.png";
+			var off = "Images/TVgif_2.gif";
+			var state = true;
+			var img = document.getElementById("img");
+			var firstTV = document.getElementById("firstTV");
+			firstTV.onmouseover = function(){
+				var on = "Images/Reaper_Condensed.png";
+				var off = "Images/TVgif_2.gif";
+				if(state){
+			  	img.src = off;
+			    state = false;
+			  }
+			}
+			firstTV.onmouseout = function(){
+				img.src = on;
+				state = true;
+			}
+			secondTV.onmouseover = function(){
+				var on = "Images/Reaper_Condensed.png";
+				var off = "Images/TVgif_6.gif";
+				if(state){
+			  	img.src = off;
+			    state = false;
+			  }
+			}
+			secondTV.onmouseout = function(){
+				img.src = on;
+				state = true;
+			}
+			thirdTV.onmouseover = function(){
+				var on = "Images/TVs_Stacked_Smaller_2.png";
+				var off = "Images/TVgif_4.gif";
+				if(state){
+					img.src = off;
+					state = false;
+				}
+			}
+			thirdTV.onmouseout = function(){
+				img.src = on;
+				state = true;
+			}
+						VHSplayer.onmouseover = function(){
+				var on = "Images/TVs_Stacked_Smaller_2.png";
+				var off = "Images/TVgif_8.gif";
+				if(state){
+					img.src = off;
+					state = false;
+				}
+			}
+			VHSplayer.onmouseout = function(){
+				img.src = on;
+				state = true;
+			}
+		</script>
   </body>
 
 
