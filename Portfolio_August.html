@@ -317,61 +317,61 @@
 </section>
 
 
-<script>
-			var on = "Images/Reaper_Condensed.png";
-			var off = "Images/TVgif_2.gif";
-			var state = true;
-			var img = document.getElementById("Reaper");
-			var firstTV = document.getElementById("firstTV");
-			firstIcon.onmouseover = function(){
-				var on = "Images/Reaper_Condensed.png";
-				var off = "Images/TVgif_2.gif";
-				if(state){
-			  	Reaper.src = off;
-			    state = false;
-			  }
-			}
-			firstIcon.onmouseout = function(){
-				Reaper.src = on;
-				state = true;
-			}
-			secondIcon.onmouseover = function(){
-				var on = "Images/Reaper_Condensed.png";
-				var off = "Images/TVgif_6.gif";
-				if(state){
-			  	Reaper.src = off;
-			    state = false;
-			  }
-			}
-			secondIcon.onmouseout = function(){
-				img.src = on;
-				state = true;
-			}
-			thirdTV.onmouseover = function(){
-				var on = "Images/TVs_Stacked_Smaller_2.png";
-				var off = "Images/TVgif_4.gif";
-				if(state){
-					img.src = off;
-					state = false;
-				}
-			}
-			thirdTV.onmouseout = function(){
-				img.src = on;
-				state = true;
-			}
-						VHSplayer.onmouseover = function(){
-				var on = "Images/TVs_Stacked_Smaller_2.png";
-				var off = "Images/TVgif_8.gif";
-				if(state){
-					img.src = off;
-					state = false;
-				}
-			}
-			VHSplayer.onmouseout = function(){
-				img.src = on;
-				state = true;
-			}
-		</script>
+  <script>
+    var on = "Images/ReaperGifConstruction4.gif";
+    var off = "Images/OrangeWater.png";
+    var state = true;
+    var img = document.getElementById("Reaper");
+    //var firstIcon = document.getElementById("firstIcon");
+    firstIcon.onmouseover = function(){
+      var on = "Images/Reaper_Condensed.png";
+      var off = "Images/PostersGif.gif";
+      if(state){
+        Reaper.src = off;
+        state = false;
+      }
+    }
+    firstIcon.onmouseout = function(){
+      Reaper.src = on;
+      state = true;
+    }
+    secondIcon.onmouseover = function(){
+      var on = "Images/Reaper_Condensed.png";
+      var off = "Images/PostersGif.gif";
+      if(state){
+        Reaper.src = off;
+        state = false;
+      }
+    }
+    secondIcon.onmouseout = function(){
+      Reaper.src = on;
+      state = true;
+    }
+    thirdTV.onmouseover = function(){
+      var on = "Images/TVs_Stacked_Smaller_2.png";
+      var off = "Images/TVgif_4.gif";
+      if(state){
+        img.src = off;
+        state = false;
+      }
+    }
+    thirdTV.onmouseout = function(){
+      img.src = on;
+      state = true;
+    }
+          VHSplayer.onmouseover = function(){
+      var on = "Images/Reaper-Condensed-Posters.png";
+      var off = "Images/TVgif_8.gif";
+      if(state){
+        img.src = off;
+        state = false;
+      }
+    }
+    VHSplayer.onmouseout = function(){
+      img.src = on;
+      state = true;
+    }
+  </script>
   </body>
 
 
