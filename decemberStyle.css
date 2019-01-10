@@ -1,11 +1,11 @@
-@font-face {
+/*@font-face {
   font-family: 'VCR OSD Mono';
   src: url('VCR_OSD_MONO_1.001.ttf');
-}
+}*/
 
 body {
   /*font-family: 'Merriweather Sans', sans-serif;*/
-  font-family: 'VCR OSD Mono';
+  /*font-family: 'VCR OSD Mono';*/
   font-size: 12pt;
   background-color: #FFCAAA;
 }
