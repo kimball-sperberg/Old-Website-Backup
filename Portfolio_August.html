@@ -111,15 +111,6 @@
               } // End if
             });
           });
-
-      //Toggle Images by clicking Info Icon
-          function change() {
-      var img1 = "Images/poster_mockup-8.png",
-         img2 = "Images/poster_mockup-7.png";
-      var imgElement = document.getElementById('test');
-
-      imgElement.src = (imgElement.src === img1)? img2 : img1;
-      }
     </script>
     <script src="http://code.jquery.com/jquery-latest.js"></script>
     <script type="text/javascript">jssor_1_slider_init();</script>
@@ -275,10 +266,7 @@
        <div class="windowBottomContainer">
 
            <div class="windowTop" onclick="myFunction(); toggleSqX();" data-toggle="collapse" data-target="#collapseExample">
-             <!--Commented out below is a modal (2 lines) where different header text would display based on screen size (above or below "lg" size as determined by bootstrap)-->
-             <!--<h1 class="windowTitle d-lg-none">About Me<img onclick="myFunction()" data-toggle="collapse" data-target="#collapseExample" src="Images/X_Button.png" class="imgX" ></h1>-->
-             <!--<h1 class="windowTitle d-none d-lg-block">About Me<img onclick="myFunction()" data-toggle="collapse" data-target="#collapseExample" src="Images/X_Button.png" class="imgX" ></h1>-->
-             <h1 class="windowTitle">About Me<img src="https://i.imgur.com/Mdyr4HT.png" id="SqX" ></img></h1>
+            <h1 class="windowTitle">About Me<img src="https://i.imgur.com/Mdyr4HT.png" id="SqX" ></img></h1>
            </div>
 
             <div class="windowBottom row">
