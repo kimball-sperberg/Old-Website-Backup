@@ -123,9 +123,66 @@
     </script>
     <script src="http://code.jquery.com/jquery-latest.js"></script>
     <script type="text/javascript">jssor_1_slider_init();</script>
-    
+        <!--Toggle [X] and [square] images-->
+    <script>
+        function toggleSqX() {
+            var img1 = "https://i.imgur.com/Mdyr4HT.png",
+               img2 = "https://i.imgur.com/QCSctxI.png";
+               // button: https://i.imgur.com/rXSjXBc.png
+            var imgElement = document.getElementById('SqX');
+
+            imgElement.src = (imgElement.src === img1)? img2 : img1;
+        }
+    </script>
+    <!--Toggle between half and full width column sizes for posters (only on tablets and smaller)-->
+    <script>
+        function colToggle() {
+            if ($(window).width() < 992) {
+                var element = document.getElementById("swap");
+                element.classList.toggle("col-12");
+                var element = document.getElementById("innerSwap");
+                element.classList.toggle("negative-left-col");
+
+                var element = document.getElementById("swap2");
+                element.classList.toggle("col-12");
+                var element = document.getElementById("innerSwap2");
+                element.classList.toggle("negative-right-col");
+
+                var element = document.getElementById("swap3");
+                element.classList.toggle("col-12");
+                var element = document.getElementById("innerSwap3");
+                element.classList.toggle("negative-left-col");
+
+                var element = document.getElementById("swap4");
+                element.classList.toggle("col-12");
+                var element = document.getElementById("innerSwap4");
+                element.classList.toggle("negative-right-col");
+
+                var element = document.getElementById("swap5");
+                element.classList.toggle("col-12");
+                var element = document.getElementById("innerSwap5");
+                element.classList.toggle("negative-left-col");
+
+                var element = document.getElementById("swap6");
+                element.classList.toggle("col-12");
+                var element = document.getElementById("innerSwap6");
+                element.classList.toggle("negative-right-col");
+            }
+        }
+
+    </script>
+
+    <!--Delays images linking to their own sections to adjust for resize-->
+    <script>
+        function delay (URL) {
+            if ($(window).width() < 992) {
+                setTimeout( function() { window.location = URL }, 100 );
+            }
+        }
+    </script>
 </head>
-<body id="bootstrap-override">
+    
+    <body id="bootstrap-override">
 
 
 <!--Hidden Menu: Appears on scroll-->
@@ -136,8 +193,20 @@
   </div>-->
 
 <!--Landing: Front page spread containing name, descriptor, navigation, etc-->
-<!--Takes up exactly the full length/width of the screen viewing-->
+  <!--Takes up exactly the full length/width of the screen viewing-->
   <section id="Landing">
+    <div class="modal fade" id="enlargeImageModal" tabindex="-1" role="dialog" aria-labelledby="enlargeImageModal" aria-hidden="true">
+       <div class="modal-dialog modal-lg" role="document">
+         <div class="modal-content">
+           <div class="modal-header">
+             <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+           </div>
+           <div class="modal-body">
+             <img src="" class="enlargeImageModalSource" style="width: 100%;">
+           </div>
+         </div>
+       </div>
+    </div>
 
     <!--<h2 class="rightAlign">
       <a href="#Design">About</a><a href="#Sites">Design</a><a href="#Glitch">Sites</a><a href="#Contact">Contact</a>
@@ -151,15 +220,15 @@
           <div class="row">
 
             <div class="col-12 iconTop">
-              <img src="Images/AboutMeIcon.png" id="firstIcon" style="max-width: 100%;">
+              <a href="#artistStatement"><img src="Images/AboutMeIcon.png" id="firstIcon" style="max-width: 100%;"></a>
             </div>
 
             <div class="col-12 iconLeftMiddle">
-              <img src="Images/PostersIcon.png" id="secondIcon" style="max-width: 100%;">
+              <a href="#gigPosters"><img src="Images/PostersIcon.png" id="secondIcon" style="max-width: 100%;"></a>
             </div>
 
             <div class="col-12 iconBottom">
-              <img src="Images/WebsitesIcon.png" style="max-width: 100%;">
+              <a href="#Websites"><img src="Images/WebsitesIcon.png" id="thirdTV" style="max-width: 100%;"></a>
             </div>
 
           </div>
@@ -175,15 +244,15 @@
           <div class="row">
 
             <div class="col-12 iconTop">
-              <img src="Images/GlitchIcon.png" style="max-width: 100%;">
+              <a href="#GlitchArt"><img src="Images/GlitchIcon.png" id="fourthIcon" style="max-width: 100%;"></a>
             </div>
 
             <div class="col-12 iconRightMiddle">
-              <img src="Images/StickersIcon.png" style="max-width: 100%;">
+              <a href="#Stickers"><img src="Images/StickersIcon.png" id="fifthIcon" style="max-width: 100%;"></a>
             </div>
 
             <div class="col-12 iconBottom">
-              <img src="Images/ContactIcon.png" style="max-width: 100%;">
+              <a href="#Contact"><img src="Images/ContactIcon.png" style="max-width: 100%;"></a>
             </div>
 
           </div>
@@ -197,31 +266,57 @@
   </section>
 
   <section id="artistStatement">
+
     <div class="container-fluid">
      <div class="customContainer">
-       <div class="windowTop">
-         <h1 class="windowTitle d-lg-none">Sam Kimball <img src="Images/X_Button.png"></h1>
-         <h1 class="windowTitle d-none d-lg-block">Sam Kimball- Web Design, Illustration, Digital Art <img id="X-Button" src="Images/X_Button.png"></h1>
-       </div>
-       <div class="windowBottom row">
-         <div id="Portrait" class="col-12 col-lg-4 text-center container-fluid">
-           <img src="Images/Portrait_Border.png" style="width:100%;">
-         </div>
-         <div class="col-12 col-lg-8 text-center container-fluid">
-           <h2>Nice to meet you.</h2>
-           <div class="d-none d-md-block text-center container-fluid"> <!--d-none d-md-block = only appears on screen size lg or greater-->
-             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+
+       <div class="windowBottomContainer">
+
+           <div class="windowTop" onclick="myFunction(); toggleSqX();" data-toggle="collapse" data-target="#collapseExample">
+             <!--Commented out below is a modal (2 lines) where different header text would display based on screen size (above or below "lg" size as determined by bootstrap)-->
+             <!--<h1 class="windowTitle d-lg-none">About Me<img onclick="myFunction()" data-toggle="collapse" data-target="#collapseExample" src="Images/X_Button.png" class="imgX" ></h1>-->
+             <!--<h1 class="windowTitle d-none d-lg-block">About Me<img onclick="myFunction()" data-toggle="collapse" data-target="#collapseExample" src="Images/X_Button.png" class="imgX" ></h1>-->
+             <h1 class="windowTitle">About Me<img src="https://i.imgur.com/Mdyr4HT.png" id="SqX" ></img></h1>
            </div>
-         </div>
-         <div class="d-md-none text-center">
-           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
-         </div>
-     </div>
+
+            <div class="windowBottom row">
+
+             <div id="Portrait" class="col-12 col-lg-4 text-center container-fluid">
+               <div class="container collapse" id="collapseExample">
+                 <img src="Images/ProfPic.jpg" style="width:100%;">
+               </div>
+             </div>
+
+             <div class="col-12 col-lg-8 text-center container-fluid">
+               <div class="container collapse" id="collapseExample">
+                   <h2>Nice to meet you.</h2>
+                   <div class="d-none d-md-block text-center container-fluid"> <!--d-none d-md-block = only appears on screen size lg or greater-->
+                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+                   </div>
+                   <div class="d-md-none text-center">
+                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+                   </div>
+                </div>
+             </div>
+
+           </div>
+         <!--windowBottom row end-->
+
+         <div class="windowBottom windowButton row">
+            <div class="col-12 text-center">
+              <button onclick="myFunction(); toggleSqX();" id="toggle" class="btn" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                Expand
+              </button>
+            </div>
+          </div>
+
+        </div>
+
     </div>
   </section>
 
 
-  <section id="gigPosters">
+<section id="gigPosters">
   <div class="container-fluid">
    <div class="customContainer">
 
@@ -229,93 +324,183 @@
        <h2 class="text-center">Posters<hr></h2>
      </div>
 
-     <div class="row img">
-       <div class="col-6 container-fluid">
-         <img class="left-half-col" src="Images/OwlBorder6.png" style="width:100%;">
+     <div class="row img" onclick="colToggle();">
+       <div id="swap" class="col-6 container-fluid" onclick="delay('#innerSwap')">
+         <a href="javascript:delay('#innerSwap3')"><img id="innerSwap" a href="#innerSwap" class="left-half-col" src="Images/OwlBorder6.png" style="width:100%;"></a>
        </div>
-       <div class="col-6 container-fluid">
-         <img class="right-half-col" src="Images/King-Krule_Poster-Web.png" style="width:100%;">
-       </div>
-     </div>
-
-     <div class="row img">
-       <div class="col-6 container-fluid">
-         <img class="left-half-col" src="Images/BobbyMahoneyPoster.png" style="width:100%;">
-       </div>
-       <div class="col-6 container-fluid">
-         <img class="right-half-col" src="Images/ABNJ-Temple-1.png" style="width:100%;">
+       <div id="swap2" class="col-6 container-fluid" onclick="delay('#innerSwap2')">
+         <a href="javascript:delay('#innerSwap3')"><img id="innerSwap2" class="right-half-col" src="Images/King-Krule_Poster-Web.png" style="width:100%;"></a>
        </div>
      </div>
 
-
-     <div class="row img">
-       <div class="col-6 container-fluid">
-         <img class="left-half-col" src="Images/A_Boy_Named_John_Amp_House-final2.png" style="width:100%;">
+     <div class="row img" onclick="colToggle();">
+       <div id="swap3" class="col-6 container-fluid" onclick="delay('#innerSwap3')">
+         <a href="javascript:delay('#innerSwap3')"><img id="innerSwap3" class="left-half-col" src="Images/BobbyMahoneyPoster.png" style="width:100%;"></a>
        </div>
-       <div class="col-6 container-fluid">
-         <img class="right-half-col" src="Images/ABNJ-Nevada-6.png" style="width:100%;">
+       <div id="swap4" class="col-6 container-fluid" onclick="delay('#innerSwap4')">
+         <a href="javascript:delay('#innerSwap4')"><img id="innerSwap4" class="right-half-col" src="Images/ABNJ-Temple-1.png" style="width:100%;"></a>
        </div>
      </div>
 
-     <div class="img">
-       <img src="Images/multicolor.png" style="width:100%;">
+
+     <div class="row img" onclick="colToggle();">
+       <div id="swap5" class="col-6 container-fluid" onclick="delay('#innerSwap5')">
+         <a href="javascript:delay('#innerSwap5')"><img id="innerSwap5" class="left-half-col" src="Images/A_Boy_Named_John_Amp_House-final2.png" style="width:100%;"></a>
+       </div>
+       <div id="swap6" class="col-6 container-fluid" onclick="delay('#innerSwap6')">
+         <a href="javascript:delay('#innerSwap6')"><img id="innerSwap6" class="right-half-col" src="Images/ABNJ-Nevada-6.png" style="width:100%;"></a>
+       </div>
      </div>
+
+     <div id="carouselExampleIndicators" class="carousel slide img" data-ride="carousel">
+       <ol class="carousel-indicators">
+         <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+         <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+         <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+       </ol>
+       <div class="carousel-inner">
+         <div class="carousel-item active">
+           <img class="d-block w-100" src="Images/multicolor.png" alt="First slide">
+         </div>
+         <div class="carousel-item">
+           <img class="d-block w-100" src="Images/Glitch_Landscape-3.png" alt="Second slide">
+         </div>
+         <div class="carousel-item">
+           <img class="d-block w-100" src="Images/Glitch_Texture-1.png" alt="Third slide">
+         </div>
+       </div>
+       <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+         <span class="sr-only">Previous</span>
+       </a>
+       <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+         <span class="carousel-control-next-icon" aria-hidden="true"></span>
+         <span class="sr-only">Next</span>
+       </a>
+     </div>
+
+
      <div class="txt">
        <p class="text-center">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look more readable.</p>
      </div>
 
     </div>
    </div>
- </section>
+  </section>
 
-<section id="Section3">
- <div class="container-fluid">
-   <div class="customContainer">
+  <section id="Websites">
+   <div class="container-fluid">
+     <div class="customContainer">
 
-     <div class="sectionTitle">
-       <h2 class="text-center">Websites<hr></h2>
+       <div class="sectionTitle">
+         <h2 class="text-center">Websites<hr></h2>
+       </div>
+
+       <div class="img">
+           <img src="Images/multicolor.png" style="width:100%;">
+       </div>
+       <br>
+
      </div>
-
-     <div class="img">
-         <img src="Images/multicolor.png" style="width:100%;">
-     </div>
-     <br>
-
    </div>
- </div>
-</section>
+  </section>
 
-<section id="Section4">
- <div class="container-fluid">
-   <div class="customContainer">
+  <section id="GlitchArt">
+   <div class="container-fluid">
+     <div class="customContainer">
 
-     <div class="sectionTitle">
-       <h2 class="text-center">Glitch Art<hr></h2>
+       <div class="sectionTitle">
+         <h2 class="text-center">Glitch Art<hr></h2>
+       </div>
+
+       <div class="row img">
+         <div class="col-6 container-fluid">
+           <img class="left-half-col" src="Images/Lady_Glitch-5.png" style="width:100%;">
+         </div>
+         <div class="col-6 container-fluid">
+           <img class="right-half-col" src="Images/Cereal_Glitch.png" style="width:100%;">
+         </div>
+       </div>
+
+       <div class="row img">
+         <div class="col-6 container-fluid">
+           <img class="left-half-col" src="Images/Glitch_Texture-2.png" style="width:100%;">
+         </div>
+         <div class="col-6 container-fluid">
+           <img class="right-half-col" src="Images/Glitch_Texture-1.png" style="width:100%;">
+         </div>
+       </div>
+
+       <div class="row img">
+         <div class="col-6 container-fluid">
+           <img class="left-half-col" src="Images/Glitch_Landscape-2.png" style="width:100%;">
+         </div>
+         <div class="col-6 container-fluid">
+           <img class="right-half-col" src="Images/Redsky_Glitch.png" style="width:100%;">
+         </div>
+       </div>
+
+       <div class="row img">
+         <div class="col-6 container-fluid">
+           <img class="left-half-col" src="Images/Flower_Glitch-3.png" style="width:100%;">
+         </div>
+         <div class="col-6 container-fluid">
+           <img class="right-half-col" src="Images/Flower_Glitch.png" style="width:100%;">
+         </div>
+       </div>
+
+       <div class="row img">
+         <div class="col-6 container-fluid">
+           <img class="left-half-col" src="Images/Random_Glitch-1.png" style="width:100%;">
+         </div>
+         <div class="col-6 container-fluid">
+           <img class="right-half-col" src="Images/What_Happened.png" style="width:100%;">
+         </div>
+       </div>
+       <br>
+
      </div>
-
-     <div class="row img">
-       <div class="col-6 container-fluid">
-         <img class="left-half-col" src="Images/Lady_Glitch-5.png" style="width:100%;">
-       </div>
-       <div class="col-6 container-fluid">
-         <img class="right-half-col" src="Images/Glitch_Landscape-2.png" style="width:100%;">
-       </div>
-     </div>
-
-     <div class="row img">
-       <div class="col-6 container-fluid">
-         <img class="left-half-col" src="Images/A_Boy_Named_John_Amp_House-final2.png" style="width:100%;">
-       </div>
-       <div class="col-6 container-fluid">
-         <img class="right-half-col" src="Images/ABNJ-Nevada-6.png" style="width:100%;">
-       </div>
-     </div>
-     <br>
-
    </div>
- </div>
-</section>
+  </section>
 
+  <section id="Stickers">
+   <div class="container-fluid">
+     <div class="customContainer">
+
+       <div class="sectionTitle">
+         <h2 class="text-center">Stickers<hr></h2>
+       </div>
+
+       <div class="row img">
+         <div class="col-12 container-fluid">
+           <img src="Images/Stickers_Banner.jpg" style="width:100%;">
+         </div>
+       </div>
+       <div class="row img">
+         <div class="col-6 container-fluid">
+           <img class="left-half-col" src="Images/Stickers_Scuba.jpg" style="width:100%;">
+         </div>
+         <div class="col-6 container-fluid">
+           <img class="right-half-col" src="Images/Stickers_Trash.jpg" style="width:100%;">
+         </div>
+       </div>
+       <div class="row img">
+         <div class="col-6 container-fluid">
+           <img class="left-half-col" src="Images/Stickers_TV.jpg" style="width:100%;">
+         </div>
+         <div class="col-6 container-fluid">
+           <img class="right-half-col" src="Images/Stickers_Eye.jpg" style="width:100%;">
+         </div>
+       </div>
+       <div class="row img">
+         <div class="col-6 container-fluid">
+           <img class="left-half-col" src="Images/Stickers_Priest.jpg" style="width:100%;">
+         </div>
+         <div class="col-6 container-fluid">
+           <img class="right-half-col" src="Images/Stickers_Punk.jpg" style="width:100%;">
+         </div>
+       </div>
+       <br>
 
   <script>
     var on = "Images/ReaperGifConstruction4.gif";
@@ -325,7 +510,7 @@
     //var firstIcon = document.getElementById("firstIcon");
     firstIcon.onmouseover = function(){
       var on = "Images/Reaper_Condensed.png";
-      var off = "Images/PostersGif.gif";
+      var off = "Images/ReaperGifConstruction4.gif";
       if(state){
         Reaper.src = off;
         state = false;
@@ -337,7 +522,7 @@
     }
     secondIcon.onmouseover = function(){
       var on = "Images/Reaper_Condensed.png";
-      var off = "Images/PostersGif.gif";
+      var off = "Images/ReaperGifPosters.gif";
       if(state){
         Reaper.src = off;
         state = false;
@@ -348,8 +533,8 @@
       state = true;
     }
     thirdTV.onmouseover = function(){
-      var on = "Images/TVs_Stacked_Smaller_2.png";
-      var off = "Images/TVgif_4.gif";
+      var on = "Images/Reaper_Condensed.png";
+      var off = "Images/ReaperGifWebsites.gif";
       if(state){
         img.src = off;
         state = false;
@@ -359,20 +544,48 @@
       img.src = on;
       state = true;
     }
-          VHSplayer.onmouseover = function(){
+    fourthIcon.onmouseover = function(){
       var on = "Images/Reaper-Condensed-Posters.png";
-      var off = "Images/TVgif_8.gif";
+      var off = "Images/ReaperGifWebsites.gif";
       if(state){
         img.src = off;
         state = false;
       }
     }
-    VHSplayer.onmouseout = function(){
+    fourthIcon.onmouseout = function(){
+      img.src = on;
+      state = true;
+    }
+    fifthIcon.onmouseover = function(){
+      var on = "Images/Reaper-Condensed-Posters.png";
+      var off = "Images/ReaperGifStickers2.gif";
+      if(state){
+        img.src = off;
+        state = false;
+      }
+    }
+    fifthIcon.onmouseout = function(){
       img.src = on;
       state = true;
     }
   </script>
-  </body>
+
+  <!--Change button text onclick-->
+  <script type="text/javascript">
+      function myFunction() {
+          var change = document.getElementById("toggle");
+          if (change.innerHTML == "Close")
+          {
+              change.innerHTML = "Expand";
+          }
+          else {
+              change.innerHTML = "Close";
+          }
+      }
+  </script>
+
+  <script src="js/bootstrap.min.js"></script>
+</body>
 
 
 </html>
