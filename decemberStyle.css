@@ -1,11 +1,8 @@
-/*@font-face {
-  font-family: 'VCR OSD Mono';
-  src: url('VCR_OSD_MONO_1.001.ttf');
-}*/
+
 
 body {
   /*font-family: 'Merriweather Sans', sans-serif;*/
-  /*font-family: 'VCR OSD Mono';*/
+
   font-size: 12pt;
   background-color: #FFCAAA;
 }
@@ -13,14 +10,19 @@ body {
 #Landing {
   max-height: 100%;
   background-size: cover;
-  height: 100vh;
+
   background-color: #FFCAAA;
   z-index: -100;
 }
 
+
 .landingContainer {
+  height: 100vh;
   padding-left: 9%;
   padding-right: 9%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 #headerText {
@@ -60,12 +62,12 @@ body {
   }
   #headerText {
     font-size: 280%; /*Fallback for older browsers*/
-    font-size: 11.25vw;
+    font-size: 12.5vw;
     padding-top: 9%;
   }
   #headerTextSecondary {
     font-size: 190%; /*Fallback for older browsers*/
-    font-size: 7.75vw;
+    font-size: 7vw;
   }
   #Reaper {
     padding-top: 2%;
@@ -99,8 +101,8 @@ body {
 
 @media (min-width: 992px) {
   .landingContainer {
-    padding-left: 3%;
-    padding-right: 3%;
+    padding-left: 18%;
+    padding-right: 18%;
   }
   #headerText {
     font-size: 280%;
@@ -126,14 +128,14 @@ body {
   }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1200px) { /*xl*/
   .landingContainer {
     padding-left: 22%;
     padding-right: 22%;
   }
   #headerText {
     font-size: 140%;
-    font-size: 4.5vw;
+    font-size: 4.3vw;
     padding-top: 8%;
   }
   #headerTextSecondary {
@@ -194,26 +196,39 @@ h1 {
 .windowTop img{
   text-align: right;
   float: right;
-  height: 33px;
+  height: 36px;
 }
 
 .windowTop {
   width: 100%;
   height: 40px;
   padding: 0px;
-  border: 3px solid #828282;
+  border-left: 2px solid white; /*#828282;*/
+  border-top: 2px solid white;
+  border-right: 2px solid black;
   background-color: #00007A;
   margin: 0;
+  cursor: pointer;
 }
 
 .windowBottom {
   width: 100%;
   padding: 0px;
-  border-left: 3px solid #828282;
-  border-right: 3px solid #828282;
-  border-bottom: 3px solid #828282;
+  border-left: 2px solid white;
+  border-right: 2px solid #828282;
   background-color: #BEBEBE;
   margin: 0;
+}
+
+.windowBottomContainer {
+  border-left: 2px solid #828282; /*#828282;*/
+  border-top: 2px solid #828282;
+  border-right: 2px solid black;
+  border-bottom: 2px solid black;
+}
+
+.windowButton {
+  border-bottom: 2px solid #828282;
 }
 
 #bootstrap-override h2 {
@@ -317,6 +332,8 @@ a:hover {
   opacity: 1;
 }
 
+
+
 h4 img {
   padding-top: 50px;
   padding-bottom: 50px;
@@ -391,6 +408,7 @@ p {
       padding-right: 4%;
     }
   }
+
 
 .right-half-col {
   padding-left: 2.5%;
@@ -569,4 +587,44 @@ hr {
   width: 15%;
   margin-top: 0px !important;
   margin-bottom: 0px !important;
+}
+
+.carousel-indicators li {
+  width: 10px;
+  height: 10px;
+  border-radius: 100%;
+}
+
+#SqX {
+  padding: 2px;
+}
+
+.btn {
+  border-radius: 0px;
+  outline: 2px solid black;
+  border-top: 2px solid white;
+  border-left: 2px solid white;
+  border-bottom: 2px solid gray;
+  border-right: 2px solid gray;
+  margin: 16px;
+}
+
+.btn:focus {
+  box-shadow: 0 0 0 0rem;
+  outline: 2px solid black;
+}
+
+#swap .col-12 {
+  padding: 0px;
+}
+
+
+.negative-left-col {
+  padding-right: 0px;
+  padding-bottom: 3%;
+}
+
+.negative-right-col {
+  padding-left: 0px;
+  padding-bottom: 3%;
 }
