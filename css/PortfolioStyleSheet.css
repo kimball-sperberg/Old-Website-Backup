@@ -1,137 +1,638 @@
-/**
-* CSS
-*
-* @version 1.0
-* @author Vaska
-* @author Gregory Cadar
-*/
 
-* {
-	margin: 0;
-	padding: 0;
-}
 
 body {
-	font-size: 11px;
-	font-family: Verdana;
-	background: #fff;
+  /*font-family: 'Merriweather Sans', sans-serif;*/
+
+  font-size: 12pt;
+  background-color: #FFCAAA;
 }
 
-body.section-1 { }
-body.section-2 { }
-body.section-3 { }
+#Landing {
+  max-height: 100%;
+  background-size: cover;
 
-a:link { text-decoration: none; }
-a:active { text-decoration: none; }
-a:visited { text-decoration: none; color: #666; }
-a:hover { text-decoration: underline; }
+  background-color: #FFCAAA;
+  z-index: -100;
+}
 
-a img { border: none; }
 
-#menu {
-    width: 300px;
-    padding-left: 30px;
-    padding-top: 20px;
-    overflow: auto;
-    top: 0;
+.landingContainer {
+  height: 100vh;
+  padding-left: 9%;
+  padding-right: 9%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#headerText {
+  font-size: 280%; /*This line will get overwritten but is a fallback for older browsers that don't use vw*/
+  font-size: 11.25vw;
+  color: black;
+  margin-bottom: 0;
+  padding-top: 3%;
+  line-height: 0.9;
+}
+
+#headerTextSecondary {
+  font-size: 190%; /*Fallback for older browsers*/
+  font-size: 7.75vw;
+  color: black;
+  margin-bottom: 0;
+  line-height: 0.9;
+}
+
+#Reaper {
+  padding-top: 2%;
+  max-width: 100%;
+  width: 100%;
+}
+
+#downArrow {
+  padding-top: 18%;
+  max-width: 25%;
+  display:block;
+  margin:auto;
+}
+
+@media (min-width: 576px) {
+  .landingContainer {
+    padding-left: 3%;
+    padding-right: 3%;
+  }
+  #headerText {
+    font-size: 280%; /*Fallback for older browsers*/
+    font-size: 12.5vw;
+    padding-top: 9%;
+  }
+  #headerTextSecondary {
+    font-size: 190%; /*Fallback for older browsers*/
+    font-size: 7vw;
+  }
+  #Reaper {
+    padding-top: 2%;
+    max-height: 90vh;
+  }
+}
+
+@media (min-width: 768px) {
+  .landingContainer {
+    padding-left: 6%;
+    padding-right: 6%;
+  }
+  #headerText {
+    font-size: 280%; /*Fallback for older browsers*/
+    font-size: 10vw;
+    padding-top: 6%;
+  }
+  #headerTextSecondary {
+    font-size: 190%; /*Fallback for older browsers*/
+    font-size: 7vw;
+  }
+  #Reaper {
+    padding-top: 2%;
+    max-width: 80%;
+  }
+  #downArrow {
+    padding-top: 18%;
+    max-width: 45%;
+  }
+}
+
+@media (min-width: 992px) {
+  .landingContainer {
+    padding-left: 18%;
+    padding-right: 18%;
+  }
+  #headerText {
+    font-size: 280%;
+    font-size: 3vw;
+    padding-top: 3%;
+  }
+  #headerTextSecondary {
+    font-size: 190%;
+    font-size: 2vw;
+  }
+  #Reaper {
+    padding-top: 2%;
+    max-height: 80vh;
+    max-width: 80%;
+  }
+  #downArrow {
+    padding-top: 12%;
+    padding-bottom: 2%;
+    max-width: 40%;
     bottom: 0;
-	left: 0;
-    position: fixed;
-    height: 100%;
-	background-color: #fff;
+    display:block;
+    margin:auto;
+  }
 }
 
-#menu ul {
-	list-style: none;
-	margin: 0 0 12px 0;
+@media (min-width: 1200px) { /*xl*/
+  .landingContainer {
+    padding-left: 22%;
+    padding-right: 22%;
+  }
+  #headerText {
+    font-size: 140%;
+    font-size: 4.3vw;
+    padding-top: 8%;
+  }
+  #headerTextSecondary {
+    font-size: 190%;
+    font-size: 3.1vw;
+  }
+  #Reaper {
+    padding-top: 2%;
+    max-height: 90vh;
+    max-width: 80%;
+  }
 }
 
-#menu ul li.section-title {
-    margin-bottom: 7px;
+.iconTop {
+  padding-top: 150%;
 }
 
-#menu ul li.section-title a {
-    text-transform: uppercase;
-    font-size: 16px;
-    font-family: Didot;
-    font-style: italic;
-    color: #ff6666;
-    width: 0;
-    border-bottom: 2px dotted gray;
-    padding-bottom: 6px;
-    margin-bottom: 4px;
-    text-decoration: none;
+.iconRightMiddle {
+  padding-top: 80%;
+  margin-left: 60%;
 }
 
-summary {
-    text-transform: uppercase;
-    font-size: 16px;
-    font-family: Didot;
-    font-style: italic;
-    color: #ff6666;
-    border-bottom: 2px dotted gray;
-    padding-bottom: 6px;
-    margin-bottom: 4px;
-    text-decoration: none;
-    display: inline;
-}
-summary::-webkit-details-marker {
-  display: none
+.iconLeftMiddle {
+  padding-top: 80%;
+  margin-left: -60%;
 }
 
-:focus {
-    outline: -webkit-focus-ring-color auto 5px;
-    outline-width: 0px;
-}
-summary a:hover, summary:hover  {
-	text-decoration:none;
-	cursor:pointer;
+.iconBottom {
+  padding-top: 80%;
 }
 
-#menu ul li.section-title a:hover {
-    text-decoration: none;
+h1 {
+  color: white;
+  font-size: 180%;
 }
 
-#menu ul li a {
-    color: #89abe3;
-
+.windowTitle {
+  padding-left: 10px;
 }
 
-#content {
-    height: 100%;
-    margin: 0 0 0 330px;
-    top: 0;
+.justify {
+  display: flex;
+  justify-content: center;
 }
 
-.container {
-    padding: 5px 5px 25px 5px;
+#artistStatement {
+  padding-bottom: 10%;
 }
 
-#content > .container:first-child {
-    margin-top: 75px;
+#gigPosters {
+  z-index: 2;
 }
 
-#content p {
-	 width: 500px;
-	 margin-bottom: 9px;
-	 font-size: 12px}
+#Portrait img {
+  padding: 10px;
+}
+
+.windowTop img{
+  text-align: right;
+  float: right;
+  height: 36px;
+}
+
+.windowTop {
+  width: 100%;
+  height: 40px;
+  padding: 0px;
+  border-left: 2px solid white; /*#828282;*/
+  border-top: 2px solid white;
+  border-right: 2px solid black;
+  background-color: #00007A;
+  margin: 0;
+  cursor: pointer;
+}
+
+.windowBottom {
+  width: 100%;
+  padding: 0px;
+  border-left: 2px solid white;
+  border-right: 2px solid #828282;
+  background-color: #BEBEBE;
+  margin: 0;
+}
+
+.windowBottomContainer {
+  border-left: 2px solid #828282; /*#828282;*/
+  border-top: 2px solid #828282;
+  border-right: 2px solid black;
+  border-bottom: 2px solid black;
+}
+
+.windowButton {
+  border-bottom: 2px solid #828282;
+}
+
+#bootstrap-override h2 {
+  margin-top: 0px;
+}
+
+#name{
+  font-size: 80px;
+  padding-left: 5%;
+  padding-top: 6%;
+}
+
+@media (min-width:500px) {
+  #name {
+    font-size: 120px;
+    padding-left: 10%;
+    padding-top: 11%;
+  }
+}
+
+#practices {
+    font-size: 55px;
+    padding-left: 5%;
+}
+
+@media (min-width:500px) {
+  #practices {
+    font-size: 80px;
+    padding-left: 10%;
+  }
+}
+
+#location {
+  font-size: 36px;
+  padding-left: 5%;
+}
+
+@media (min-width:500px) {
+  #location {
+    font-size: 53px;
+    padding-left: 10%;
+    line-height: 1.8em;
+  }
+}
+
+#scrollMenu {
+	position:fixed;
+	top:0px;
+	width:100%;
+	z-index:9999;
+	display: none;
+  text-decoration: none;
+  background-color: white;
+}
+
+#scrollMenu a {
+  text-decoration: none;
+}
+.rightAlign {
+  text-align: right;
+  padding-top: 10px;
+  padding-bottom: 0px;
+  padding-right: 10%;
+  text-decoration: none;
+}
+
+.leftAlign {
+  text-align: left;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  padding-left: 10%;
+}
+
+.rightAlign a {
+  margin-left: 5%;
+  text-decoration: none;
+  color: black;
+}
+
+.thumbnail {
+  max-height: 40px;
+  text-align: left;
+  padding-right: 29%;
+}
+
+a:hover {
+  color: purple;
+}
+
+.aboutMe {
+  opacity: 0.6;
+  position: absolute;
+  bottom: 0;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+}
+
+.aboutMe:hover {
+  opacity: 1;
+}
+
+
+
+h4 img {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  max-width: 300px;
+}
+
+h4 {
+  font-size: 24pt;
+}
 
 p {
-    margin: 0 0 9px 0;
+  font-size: 18pt;
 }
 
-h1 { font-size: 32px; }
-h2 { font-size: 24px; }
-h3 { font-size: 16px; }
-h4 { font-size: 12px; }
+.customContainer {
+  margin-left: 3%;
+  margin-right: 3%;
+}
 
-#img-container	{ margin: 0; padding: 0; }
-#img-container p	{ width: 400px; margin: 0; padding: 0 0 12px 0; }
+@media screen and (min-width:768px) {
+  .customContainer {
+    margin-left: 5%;
+    margin-right: 5%;
+    }
+  }
 
-#once { clear: left; }
+@media screen and (min-width:992px) {
+  .customContainer {
+    margin-left: 9%;
+    margin-right: 9%;
+    }
+  }
 
-#footer {
-    padding-left: 30px;
-    position: absolute;
-    bottom: 2em;
- }
+@media screen and (min-width:1200px) {
+  .customContainer {
+    margin-left: 14%;
+    margin-right: 14%;
+    }
+  }
+
+.indent {
+  padding-left: 8%;
+  font-size: 24pt;
+}
+
+#bootstrap-override h3 {
+  font-size: 24pt;
+}
+
+.carousel-caption {
+  margin: 10px;
+}
+
+.left-half-col {
+  padding-right: 2.5%;
+}
+
+@media (min-width:768px) {
+  .left-half-col {
+      padding-right: 3%;
+    }
+  }
+
+@media (min-width:992px) {
+  .left-half-col {
+      padding-right: 3.5%;
+    }
+  }
+
+@media (min-width:1200px) {
+  .left-half-col {
+      padding-right: 4%;
+    }
+  }
+
+
+.right-half-col {
+  padding-left: 2.5%;
+}
+
+@media (min-width:768px) {
+  .right-half-col {
+      padding-left: 3%;
+    }
+  }
+
+@media (min-width:992px) {
+  .right-half-col {
+      padding-left: 3.5%;
+    }
+  }
+
+@media (min-width:1200px) {
+  .right-half-col {
+      padding-left: 4%;
+    }
+  }
+
+
+
+/*This line counteracts bootstrap's code which gives rows a margin of -15 on either side */
+.row {
+  margin-right: 0px !important;
+  margin-left: 0px !important;
+}
+
+.container-fluid {
+  padding-right: 0px !important;
+  padding-left: 0px !important;
+}
+
+
+
+/*These lines fix a bug on iOS where bootstrap rows will display as 'table'*/
+.row:before {
+    display: inline-block;
+  }
+
+.row:after {
+  display: inline-block;
+}
+
+/*jssor slider loading skin spin css*/
+.jssorl-009-spin img {
+    animation-name: jssorl-009-spin;
+    animation-duration: 1.6s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes jssorl-009-spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+/*jssor slider bullet skin 051 css*/
+  .jssorb051 .i {position:absolute;cursor:pointer;}
+  .jssorb051 .i .b {fill:#fff;fill-opacity:0.5;}
+  .jssorb051 .i:hover .b {fill-opacity:.7;}
+  .jssorb051 .iav .b {fill-opacity: 1;}
+  .jssorb051 .i.idn {opacity:.3;}
+
+/*jssor slider arrow skin 051 css*/
+  .jssora051 {display:block;position:absolute;cursor:pointer;}
+  .jssora051 .a {fill:none;stroke:#fff;stroke-width:360;stroke-miterlimit:10;}
+  .jssora051:hover {opacity:.8;}
+  .jssora051.jssora051dn {opacity:.5;}
+  .jssora051.jssora051ds {opacity:.3;pointer-events:none;}
+
+#bootstrap-override .col-xs-6 {
+padding-left: 0 !important;
+padding-right: 0 !important;
+}
+
+#bootstrap-override .img {
+  padding-top: 2.5%;
+}
+
+@media (min-width:768px) {
+  #bootstrap-override .img {
+      padding-top: 3%;
+    }
+  }
+
+@media (min-width:992px) {
+  #bootstrap-override .img {
+      padding-top: 3.5%;
+    }
+  }
+
+@media (min-width:1200px) {
+  #bootstrap-override .img {
+      padding-top: 4%;
+    }
+  }
+
+#bootstrap-override .txt {
+  padding-top: 1.25%;
+}
+
+@media (min-width:768px) {
+  #bootstrap-override .txt {
+      padding-top: 2.5%;
+    }
+  }
+
+@media
+only screen and (-webkit-min-device-pixel-ratio: 1.5),
+only screen and (-o-min-device-pixel-ratio: 3/2),
+only screen and (min--moz-device-pixel-ratio: 1.5),
+only screen and (min-device-pixel-ratio: 1.5){
+
+  html,
+  body{
+    width:100%;
+
+  }
+
+}
+
+#bootstrap-override .sectionTitle h2 {
+  font-size: 250%;
+  padding-top: 1%;
+}
+
+@media (min-width:768px) {
+  #bootstrap-override .sectionTitle h2 {
+      font-size: 360%;
+      padding-top: 1.5%;
+    }
+  }
+
+@media (min-width:992px) {
+  #bootstrap-override .sectionTitle h2 {
+      font-size: 420%;
+      padding-top: 2%;
+    }
+  }
+
+@media (min-width:1200px) {
+  #bootstrap-override .sectionTitle h2 {
+      font-size: 450%;
+      padding-top: 2.5%;
+    }
+  }
+
+#bootstrap-override p {
+  font-size: 120%;
+}
+
+@media (min-width:768px) {
+  #bootstrap-override p {
+      font-size: 145%;
+    }
+  }
+
+@media (min-width:992px) {
+  #bootstrap-override p {
+      font-size: 170%;
+    }
+  }
+
+@media (min-width:1200px) {
+  #bootstrap-override p {
+      font-size: 195%;
+    }
+  }
+
+hr {
+  color: black;
+  width: 15%;
+  margin-top: 0px !important;
+  margin-bottom: 0px !important;
+}
+
+.carousel-indicators li {
+  width: 10px;
+  height: 10px;
+  border-radius: 100%;
+}
+
+#SqX {
+  padding: 2px;
+}
+
+.btn {
+  border-radius: 0px;
+  outline: 2px solid black;
+  border-top: 2px solid white;
+  border-left: 2px solid white;
+  border-bottom: 2px solid gray;
+  border-right: 2px solid gray;
+  margin: 16px;
+}
+
+.btn:focus {
+  box-shadow: 0 0 0 0rem;
+  outline: 2px solid black;
+}
+
+#swap .col-12 {
+  padding: 0px;
+}
+
+
+.negative-left-col {
+  padding-right: 0px;
+  padding-top: 3%;
+}
+
+.negative-right-col {
+  padding-left: 0px;
+  padding-top: 3%;
+}
+
+#fourthIcon {
+  background-image: url('Images/GlitchIcon2.png');
+}
+
+#fourthIcon:hover {
+  background-image: url('Images/GlitchIcon.png');
+}
