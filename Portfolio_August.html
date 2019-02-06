@@ -6,7 +6,7 @@
     <!--Bootstrap css-->
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <!-- My css -->
-    <link rel="stylesheet" href="decemberStyle.css">
+    <link rel="stylesheet" href="css/style.css">
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:400;300' rel='stylesheet' type='text/css'>
   	<link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
     <link href="https://fonts.googleapis.com/css?family=Share:400,400i,700,700i" rel="stylesheet">
@@ -111,12 +111,15 @@
               } // End if
             });
           });
+
+
     </script>
     <script src="http://code.jquery.com/jquery-latest.js"></script>
     <script type="text/javascript">jssor_1_slider_init();</script>
-    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    <!--Toggle between 2 images on click (for Stickers header)
 
-        <!--Toggle [X] and [square] images-->
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    <!--Toggle [X] and [square] images-->
     <script>
         function toggleSqX() {
             var img1 = "https://i.imgur.com/Mdyr4HT.png",
@@ -169,13 +172,20 @@
     <script>
         function delay (URL) {
             if ($(window).width() < 992) {
-                setTimeout( function() { window.location = URL }, 100 );
+                setTimeout( function() { window.location = URL }, 10 );
             }
         }
     </script>
+    <!--<script>
+      $(function() {
+      $('img').on('click', function() {
+      $('.enlargeImageModalSource').attr('src', $(this).attr('src'));
+      $('#enlargeImageModal').modal('show');
+        });
+      });
+    </script>-->
 </head>
-    
-    <body id="bootstrap-override">
+<body id="bootstrap-override">
 
 
 <!--Hidden Menu: Appears on scroll-->
@@ -237,7 +247,7 @@
           <div class="row">
 
             <div class="col-12 iconTop">
-              <a href="#GlitchArt"><img src="Images/GlitchIcon.png" id="fourthIcon" style="max-width: 100%;"></a>
+              <a href="#GlitchArt"><img src="Images/GlitchIcon2.png" id="fourthIcon" style="max-width: 100%;"></a>
             </div>
 
             <div class="col-12 iconRightMiddle">
@@ -245,7 +255,7 @@
             </div>
 
             <div class="col-12 iconBottom">
-              <a href="#Contact"><img src="Images/ContactIcon.png" style="max-width: 100%;"></a>
+              <a href="#Contact"><img src="Images/ContactIcon.png" id="sixthIcon" style="max-width: 100%;"></a>
             </div>
 
           </div>
@@ -266,14 +276,17 @@
        <div class="windowBottomContainer">
 
            <div class="windowTop" onclick="myFunction(); toggleSqX();" data-toggle="collapse" data-target="#collapseExample">
-            <h1 class="windowTitle">About Me<img src="https://i.imgur.com/Mdyr4HT.png" id="SqX" ></img></h1>
+             <!--Commented out below is a modal (2 lines) where different header text would display based on screen size (above or below "lg" size as determined by bootstrap)-->
+             <!--<h1 class="windowTitle d-lg-none">About Me<img onclick="myFunction()" data-toggle="collapse" data-target="#collapseExample" src="Images/X_Button.png" class="imgX" ></h1>-->
+             <!--<h1 class="windowTitle d-none d-lg-block">About Me<img onclick="myFunction()" data-toggle="collapse" data-target="#collapseExample" src="Images/X_Button.png" class="imgX" ></h1>-->
+             <h1 class="windowTitle">About Me<img src="https://i.imgur.com/Mdyr4HT.png" id="SqX" ></img></h1>
            </div>
 
             <div class="windowBottom row">
 
              <div id="Portrait" class="col-12 col-lg-4 text-center container-fluid">
                <div class="container collapse" id="collapseExample">
-                 <img src="Images/profpic.jpg" style="width:100%;">
+                 <img src="Images/ProfPic.jpg" style="width:100%;">
                </div>
              </div>
 
@@ -463,7 +476,7 @@
 
        <div class="row img">
          <div class="col-12 container-fluid">
-           <img src="Images/Stickers_Banner.jpg" style="width:100%;">
+           <img src="Images/Stickers_All.jpg" style="width:100%;">
          </div>
        </div>
        <div class="row img">
@@ -500,7 +513,7 @@
     //var firstIcon = document.getElementById("firstIcon");
     firstIcon.onmouseover = function(){
       var on = "Images/Reaper_Condensed.png";
-      var off = "Images/ReaperGifConstruction4.gif";
+      var off = "Images/ReaperGifAboutMe.gif";
       if(state){
         Reaper.src = off;
         state = false;
@@ -536,7 +549,7 @@
     }
     fourthIcon.onmouseover = function(){
       var on = "Images/Reaper-Condensed-Posters.png";
-      var off = "Images/ReaperGifWebsites.gif";
+      var off = "Images/ReaperGifGlitchArt.gif";
       if(state){
         img.src = off;
         state = false;
@@ -555,6 +568,18 @@
       }
     }
     fifthIcon.onmouseout = function(){
+      img.src = on;
+      state = true;
+    }
+    sixthIcon.onmouseover = function(){
+      var on = "Images/Reaper-Condensed-Posters.png";
+      var off = "Images/ReaperGifContact.gif";
+      if(state){
+        img.src = off;
+        state = false;
+      }
+    }
+    sixthIcon.onmouseout = function(){
       img.src = on;
       state = true;
     }
